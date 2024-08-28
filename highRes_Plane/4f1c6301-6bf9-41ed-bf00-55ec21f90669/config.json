@@ -1,0 +1,120 @@
+{
+     "dims": [
+          "ca",
+          "depol_stdev_mean_ratio",
+          "desired_connected_proportion_of_invivo_frs",
+          "vpm_pct",
+          "seed"
+     ],
+     "attrs": {
+          "path_prefix": "/gpfs/bbp.cscs.ch/data/scratch/proj85/from68/sonata_circuits/whiskerFlick/original/lfp/highRes_Plane",
+          "blue_config_template": "SONATAConfig__SSCx-HexO1-Release-TC__OUCalib__VPM_LFP.tmpl",
+          "circuit_target": "hex_O1",
+          "sim_duration": 3000,
+          "reconn_delay": 1000,
+          "ornstein_uhlenbeck_delay": 250,
+          "in_vivo_reference_frs": {
+               "L1I": 1.5,
+               "L23E": 0.07,
+               "L23I": 0.961,
+               "L4E": 0.619,
+               "L4I": 1.184,
+               "L5E": 1.252,
+               "L5I": 2.357,
+               "L6E": 0.47,
+               "L6I": 1.5
+          },
+          "data_for_unconnected_fit_name": "data_for_unconnected_fit_conductance_based_TRIANGLULAR-19-7-22.parquet",
+          "data_for_connected_adjustment_fit_name": "concatented_mgfix_connection_data_15-11-22.parquet",
+          "unconnected_connected_fr_adjustment_fit_method": "exponential",
+          "stim_seed": 12345,
+          "stim_target": "hex0",
+          "vpm_proj_name": "VPM",
+          "stim_delay": 1500,
+          "stim_rate": 2,
+          "vpm_mu": 1.65,
+          "pom_mu": 2.98,
+          "vpm_sigma": 0.22,
+          "pom_sigma": 0.32,
+          "vpm_spike_rate": 1.0,
+          "pom_spike_rate": 0.5,
+          "circuit_config": "/gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/circuit_config.json"
+     },
+     "data": [
+          [
+               [
+                    [
+                         [
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/0",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/1",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/2",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/3",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/4",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/5",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/6",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/7",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/8",
+                              "4f1c6301-6bf9-41ed-bf00-55ec21f90669/9"
+                         ]
+                    ]
+               ]
+          ]
+     ],
+     "coords": {
+          "ca": {
+               "dims": [
+                    "ca"
+               ],
+               "attrs": {},
+               "data": [
+                    1.05
+               ]
+          },
+          "depol_stdev_mean_ratio": {
+               "dims": [
+                    "depol_stdev_mean_ratio"
+               ],
+               "attrs": {},
+               "data": [
+                    0.4
+               ]
+          },
+          "desired_connected_proportion_of_invivo_frs": {
+               "dims": [
+                    "desired_connected_proportion_of_invivo_frs"
+               ],
+               "attrs": {},
+               "data": [
+                    0.3
+               ]
+          },
+          "vpm_pct": {
+               "dims": [
+                    "vpm_pct"
+               ],
+               "attrs": {},
+               "data": [
+                    10
+               ]
+          },
+          "seed": {
+               "dims": [
+                    "seed"
+               ],
+               "attrs": {},
+               "data": [
+                    843,
+                    814,
+                    632,
+                    508,
+                    268,
+                    40,
+                    16,
+                    306,
+                    175,
+                    75
+               ]
+          }
+     },
+     "name": "4f1c6301-6bf9-41ed-bf00-55ec21f90669"
+}

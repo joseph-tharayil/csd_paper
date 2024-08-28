@@ -1,0 +1,30 @@
+set -e
+module load unstable
+module load neurodamus-neocortex py-neurodamus
+# export NEXUS_TOKEN=<MASKED>
+export NEXUS_WORKFLOW="https://bbp.epfl.ch/neurosciencegraph/data/a77e45db-f855-4a7b-bf0c-22db1e80f69f"
+export NEXUS_PROJ="somatosensorycortex"
+# export KC_SCR=<MASKED>
+stdbuf -oL -eL sbatch << 'EOF_SBATCH'
+#!/bin/bash -l
+#SBATCH --account=proj83
+#SBATCH --partition=prod
+#SBATCH --nodes=16
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=0
+#SBATCH --constraint=cpu
+#SBATCH --exclusive
+#SBATCH --time=24:00:00
+#SBATCH --job-name=PlasticityCortexNrdmsPySim
+#SBATCH --output=/gpfs/bbp.cscs.ch/data/scratch/proj85/from68/sonata_circuits/whiskerFlick/original/lfp/grid/cd0a1d8f-87e7-406f-b276-30c2c88e408e/%a/.%A_%a.log
+#SBATCH --array=0-9%2
+#SBATCH --wait
+cd /gpfs/bbp.cscs.ch/data/scratch/proj85/from68/sonata_circuits/whiskerFlick/original/lfp/grid/cd0a1d8f-87e7-406f-b276-30c2c88e408e/$SLURM_ARRAY_TASK_ID
+test -f simulation_config.json.SUCCESS && { echo "Simulation output found, exiting."; exit; }
+FOLDER_JOB_IDS="$(find . -maxdepth 1 -type f -name '.*.log' -exec bash -c 'echo ${1//[^_0-9]/}' _ {} \;)"
+CURRENT_JOB_ID=${SLURM_ARRAY_JOB_ID}_${SLURM_ARRAY_TASK_ID}
+JOB_IDS_TO_TEST=$((echo "$FOLDER_JOB_IDS"; echo $CURRENT_JOB_ID) | sort | uniq -u | paste -d, -s)
+RUNNING_JOB_IDS=$(test -n "$JOB_IDS_TO_TEST" && squeue --jobs=$JOB_IDS_TO_TEST --noheader --states=RUNNING,COMPLETING --format=%A | paste -d, -s)
+test -n "$RUNNING_JOB_IDS" && { echo "Running jobs($RUNNING_JOB_IDS) detected, exiting"; exit; }
+srun dplace special -mpi -python $NEURODAMUS_PYTHON/init.py --configFile=simulation_config.json --lb-mode=RoundRobin
+EOF_SBATCH
