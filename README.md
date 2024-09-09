@@ -3,6 +3,8 @@
 This repository contains the code used in the paper "iCSD generates spurious signals for dense electrode arrays". Steps to reproduce the figures in that paper are as follows:
 
 ## Installation
+Download the model data from our [Zenodo repository](https://zenodo.org/records/11113043) and extract it into the `config` folder.
+
 Install Neurodamus and BlueRecording according to the instructions in the [BlueRecording repository](github.com/BlueBrain/BlueRecording). This repo assumes that your system meets the requirements described there.
 
 ## Reproducing Figure 2
