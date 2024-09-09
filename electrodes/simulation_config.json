@@ -23,7 +23,7 @@
   },
 
   "target_simulator": "CORENEURON",
-  "network": "/gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/circuit_config.json",
+  "network": "../circuit_config.json",
   "node_set": "hex_O1",
   "output": {
     "output_dir": "./reporting",

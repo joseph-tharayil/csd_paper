@@ -5,6 +5,12 @@ import sys
 from bluerecording.utils import alignmentInfo, getAtlasInfo
 import numpy as np
 
+'''
+This script creates a csv file for an electrode array with an inter-electrode spacing of 40 um
+The LFP will be calculated using the line source approximation
+The csv file will also include electrodes to calculate the osCSD and odCSD, for inter-electrode spacings of 40 um, 80 um, and 160 um
+'''
+
 def repositionElectrode(probe,center,azimuth,elevation):
 
     probe.rotate([0,1,0],elevation*180/np.pi)

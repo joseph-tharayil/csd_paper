@@ -19,4 +19,4 @@ source ~/bluerecording-dev/bin/activate
 NEURONS_PER_FILE=1000
 FILES_PER_FOLDER=50
 
-srun -n 6000 python run_write_weights.py 'simulation_config.json' 'positions' 'coeffs_neuropixels_grid_highRes.h5' $NEURONS_PER_FILE $FILES_PER_FOLDER '0.374556' 
+srun -n 6000 python run_write_weights.py 'simulation_config.json' 'positions' 'coeffs_sphere.h5' $NEURONS_PER_FILE $FILES_PER_FOLDER '0.374556' 

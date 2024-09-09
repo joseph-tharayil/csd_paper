@@ -6,6 +6,12 @@ from bluerecording.utils import alignmentInfo, getAtlasInfo
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 
+'''
+This script creates a csv file for an electrode array with a line of electrodes, perpendicular to the long axis of the cortical column,
+in each of Layers 6, 5, 4, and 3. The electrodes span a distance of 100 um with 2 um spacing
+Each of the electrodes will calculate the objective sphere CSD, with a sphere of radius 10 um
+'''
+
 def repositionElectrode(probe,center,azimuth,elevation):
 
     probe.rotate([0,1,0],elevation*180/np.pi)
@@ -51,22 +57,6 @@ if __name__=='__main__':
 
     electrodePositions += center
 
-            # probe = MEA.return_mea(probe_name)
-
-            # probe.move([i*40,j*40,0])
-
-            # repositionElectrode(probe, center, azimuth, elevation)
-
-            # if index == 0:
-
-            #     electrodePositions = probe.positions[23:74]
-            # else:
-            #     electrodePositions = np.vstack((electrodePositions,probe.positions[23:74]))
-
-            # index += 1
-
-
-
     electrodeTypeList = []
     numElectrodes = 0
     
@@ -78,8 +68,6 @@ if __name__=='__main__':
     regionList, layerList = getAtlasInfo(path_to_simconfig, electrodePositions)
 
     electrodeData = pd.DataFrame(data=electrodePositions,columns=['x','y','z'])
-    
-    
 
     layerData = pd.DataFrame(data=layerList,columns=['layer'])
 

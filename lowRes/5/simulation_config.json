@@ -4,7 +4,7 @@
     "tstop": 3000,
     "random_seed": 40,
     "run_mode":"WholeCell",
-    "electrodes_file": "/gpfs/bbp.cscs.ch/project/proj85/scratch/from68/sonata_circuits/whiskerFlick/compartment/c6374a94-59b9-468d-8958-f7c8f876e562/0/coeffs_neuropixels_objective.h5"
+    "electrodes_file": "../../electrodes/coeffs.h5"
   },
 
   "conditions": {
@@ -24,7 +24,7 @@
   },
 
   "target_simulator": "CORENEURON",
-  "network": "/gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/circuit_config.json",
+  "network": "../../config/circuit_config.json",
   "node_set": "hex_O1",
   "output": {
     "output_dir": "./reporting",

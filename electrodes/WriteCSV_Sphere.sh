@@ -12,4 +12,4 @@
 module load unstable py-mpi4py
 source ~/bluerecording-dev/bin/activate
 
-srun -n 1 python writeNeuropixelsToCSV_Objective_MoreHighRes.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_MoreHighRes.csv'
+srun -n 1 python writeCSV_sphere.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_sphere.csv'
