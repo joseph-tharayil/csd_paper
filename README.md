@@ -44,3 +44,6 @@ Then launch the simulations in the folders `lowRes` and `highRes` by running the
 Next, sum the LFP and $o_DCSD$ signals over cells by running the scripts `Geteeg.sh` in each of those folders.
 
 Finally, run the notebook `csdCorrelations.ipynb` to generate Figure 3.
+
+# Acknowledgment
+The development of this software was supported by funding to the Blue Brain Project, a research center of the École polytechnique fédérale de Lausanne (EPFL), from the Swiss government's ETH Board of the Swiss Federal Institutes of Technology.
