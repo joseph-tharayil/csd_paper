@@ -34,7 +34,7 @@ Then, launch the script `Geteeg.sh` in the `osCSD` folder to sum the recorded os
 Finally, run the notebook `osCSD_correlations.ipynb` to produce Figure 2b.
 
 ## Reproducing Figure 3
-Generate electrode arrays with 40 $\mu$ m and 20 $\mu$ m spacing, to calculate LFP and $o_DCSD$
+Generate electrode arrays with 40 $\mu m$ and 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
 - In the folder `electrodes`, run `WriteCSV.sh` (respectively `WriteCSV_HighRes.sh`) to generate the csv file that defines the electrode array.
 - Run `InitializeArray.sh` (respectively `InitializeArray_HighRes.sh`) to initialize the h5 file read by Neurodamus
 - Run `PopulateArray.sh` (respectively `PopulateArray_HighRes.sh`) to populate the h5 file created in the previous step.
