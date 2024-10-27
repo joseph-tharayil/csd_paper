@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name="EEG_2_CoordsV"
 #SBATCH --partition=prod
-#SBATCH --nodes=200
+#SBATCH --nodes=400
 #SBATCH -C clx
 #SBATCH --cpus-per-task=2
 #SBATCH --time=24:00:00
@@ -19,4 +19,4 @@ source ~/bluerecording-dev/bin/activate
 NEURONS_PER_FILE=1000
 FILES_PER_FOLDER=50
 
-srun -n 6000 python run_write_weights.py 'simulation_config.json' 'positions' 'coeffs_sphere.h5' $NEURONS_PER_FILE $FILES_PER_FOLDER '0.374556' 
+srun -n 12000 python run_write_weights.py 'simulation_config.json' 'positions' 'coeffs_smallRadii.h5' $NEURONS_PER_FILE $FILES_PER_FOLDER '0.374556' 

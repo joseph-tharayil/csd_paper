@@ -43,11 +43,19 @@ if __name__=='__main__':
 
     kList = -2082/2 + np.array([350,700+525/2,700+525+190/2,700+525+190+353/2])
 
-    for k in kList:
+    heightList = [350,int(525/2),int(190/2),int(353/2)]
 
-        for j in np.arange(-25,25):
+    electrodeTypeList = []
 
-            probeList.append([0,j*2,k])
+    for x, k in enumerate(kList):
+
+        for j in np.arange(-4,5):
+
+            for i in np.arange(-4,5):
+
+                probeList.append([i*10,j*10,k])
+
+                electrodeTypeList.append('ObjectiveCSD_Disk_10_'+str(heightList[x]))
 
     electrodePositions = np.array(probeList)
 
@@ -57,12 +65,12 @@ if __name__=='__main__':
 
     electrodePositions += center
 
-    electrodeTypeList = []
-    numElectrodes = 0
+    #electrodeTypeList = []
+    #numElectrodes = 0
     
 
-    electrodeType = 'ObjectiveCSD_Sphere'
-    electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
+    #electrodeType = 'ObjectiveCSD_Disk_10_350'
+    #electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
  
 
     regionList, layerList = getAtlasInfo(path_to_simconfig, electrodePositions)

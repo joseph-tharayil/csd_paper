@@ -1,7 +1,7 @@
 #!/bin/bash -l
 #SBATCH --job-name="EEG_2_CoordsV"
 #SBATCH --partition=prod
-#SBATCH --nodes=10
+#SBATCH --nodes=30
 #SBATCH -C clx
 #SBATCH --cpus-per-task=2
 #SBATCH --time=24:00:00
@@ -22,8 +22,8 @@ module load unstable py-bluepysnap py-bluepy
 mkdir pkls
 for i in {0..10}
 do
-    mkdir $i/pkls
+    mkdir $i/pkls_overlap
 done
 
-srun -n 10 python geteeg.py
+srun -n 300 python geteeg.py
 

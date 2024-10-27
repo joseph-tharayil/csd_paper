@@ -1,0 +1,249 @@
+neuron(101):ERROR:105: Unable to locate a modulefile for 'neuron/develop'
+numprocs=1600
+NEURON -- VERSION 9.0a-307-gc48d7d5bd+ HEAD (c48d7d5bd+) 2024-07-18
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2022
+See http://neuron.yale.edu/neuron/credits
+
+Additional mechanisms from files
+ "mod/ALU.mod" "mod/CaDynamics_DC0.mod" "mod/CaDynamics_E2.mod" "mod/Ca_HVA2.mod" "mod/Ca_HVA.mod" "mod/Ca_LVAst.mod" "mod/Ca.mod" "mod/ConductanceSource.mod" "mod/CoreNEURONArtificialCell.mod" "mod/DetAMPANMDA.mod" "mod/DetGABAAB.mod" "mod/gap.mod" "mod/GluSynapse.mod" "mod/Ih.mod" "mod/Im.mod" "mod/KdShu2007.mod" "mod/K_Pst.mod" "mod/K_Tst.mod" "mod/Kv7.mod" "mod/MembraneCurrentSource.mod" "mod/Nap_Et2.mod" "mod/NaTa_t.mod" "mod/NaTg_axon.mod" "mod/NaTg.mod" "mod/NaTg_persistent_axon.mod" "mod/NaTg_persistent_somadend.mod" "mod/NaTg_somadend.mod" "mod/NaTs2_t.mod" "mod/netstim_inhpoisson.mod" "mod/ProbAMPANMDA_EMS.mod" "mod/ProbGABAAB_EMS.mod" "mod/SK_E2.mod" "mod/SKv3_1.mod" "mod/SonataReportHelper.mod" "mod/SonataReports.mod" "mod/StochKv3.mod" "mod/StochKv.mod" "mod/TTXDynamicsSwitch.mod" "mod/vecevent.mod"
+[STEP] Initializing Neurodamus... Logfile: pydamus_2024-09-27_10h54.log
+[INFO]  => Neurodamus Mod & Hoc lib loaded.
+[INFO] Checking for plugins...
+[INFO]  => Engines Available: ['Base', 'NGV', 'METype']
+[INFO]   : Connections Types: [<ConnectionTypes.NeuroGlial: 'NeuroGlial'>, <ConnectionTypes.GlioVascular: 'GlioVascular'>, None, <ConnectionTypes.Synaptic: 'Synaptic'>, <ConnectionTypes.GapJunction: 'GapJunction'>, <ConnectionTypes.NeuroModulation: 'NeuroModulation'>]
+[STEP] Setting up Neurodamus configuration
+[INFO] Initializing Simulation Configuration and Validation
+[INFO] Valid CoreNeuron input data not found in '/dev/shm/sim-hpc/2543154/gpfs/bbp.cscs.ch/project/proj85/lfp/osCSD/2/reporting/coreneuron_input'. Neurodamus will proceed to model building.
+[INFO] Checking simulation requirements
+[INFO] Initializing hoc config objects
+As of Oct 2020 Neurodamus uses Random123 as default
+[INFO] User-defined RNG base seed 632.0
+[WARNING] Some node set rules were replaced from /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/node_sets.json
+[INFO] Memusage (RSS) per node [MB]: Max=5103.38, Min=5100.97, Mean(Stdev)=5102.36(0.86)
+[INFO] Memusage (RSS) per task [MB]: Max=132.14, Min=127.48, Mean(Stdev)=127.68(0.70)
+[INFO] Checking Connection Configurations
+[WARNING] Delayed connection disconnect is not overriding any weight=0 Connection
+[WARNING] Delayed connection reconnect is not overriding any weight=0 Connection
+[INFO]  => CHECK No Global vars!
+[INFO]  => CHECK No Block Overrides!
+[INFO]  => CHECK No single Weight=0 blocks!
+[STEP] ================ CALCULATING LOAD BALANCE ================
+[STEP] Computing Load Balance
+[INFO] Activating experimental LB for Sonata circuit 'S1nonbarrel_neurons'
+[INFO] Memusage (RSS) per node [MB]: Max=5465.06, Min=5458.74, Mean(Stdev)=5460.25(1.15)
+[INFO] Memusage (RSS) per task [MB]: Max=144.66, Min=136.34, Mean(Stdev)=136.51(0.52)
+[STEP] ==================== BUILDING CIRCUIT ====================
+[WARNING] SonataError for nodeset Layer6Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer1Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer1Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[STEP] LOADING NODES
+[INFO] Load-balance object not present. Continuing Round-Robin...
+[INFO]  => (default) Circuit has been disabled
+[STEP] Circuit POm
+[STEP] Circuit S1nonbarrel_neurons
+[INFO] Reading Nodes (METype) info from '/gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/nodes/S1nonbarrel_neurons/nodes.h5'
+[INFO]  -> Distributing 'S1nonbarrel_neurons:hex_O1' target cells Round-Robin
+[INFO]  => Loaded info about 211712 target cells (out of 4234929)
+[STEP] Circuit VPM
+[WARNING] For non-sonata circuit, only a single Virtual Cell Population works with REPLAY
+[INFO] Reading LFP configuration info from '/gpfs/bbp.cscs.ch/project/proj85/lfp/electrodes/coeffs_sphere.h5'
+/gpfs/bbp.cscs.ch/ssd/apps/bsd/2024-02-01/stage_applications/install_gcc-12.3.0-skylake/py-numpy-1.26.1-elr5pn/lib/python3.11/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/gpfs/bbp.cscs.ch/ssd/apps/bsd/2024-02-01/stage_applications/install_gcc-12.3.0-skylake/py-numpy-1.26.1-elr5pn/lib/python3.11/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+[STEP] FINALIZING CIRCUIT CELLS
+[STEP] Circuit (default)
+[STEP] Circuit S1nonbarrel_neurons
+[INFO] Finalizing cells... Gid offset: 232000
+[INFO]  > Instantiating cells... (133 in Rank 0)
+|-------20%-------40%-------60%-------80%------100%| [Time taken: 80.71 s]
+[INFO]  > Updating targets
+[INFO]  > Initializing cell network
+[INFO] Memusage (RSS) per node [MB]: Max=14293.50, Min=14082.49, Mean(Stdev)=14170.03(50.75)
+[INFO] Memusage (RSS) per task [MB]: Max=374.42, Min=336.52, Mean(Stdev)=354.26(5.89)
+[STEP] LOADING CIRCUIT CONNECTIVITY
+[STEP] Circuit (default)
+[INFO]  => No connectivity set as internal. See projections
+[STEP] Circuit POm
+[INFO]  => No connectivity set as internal. See projections
+[STEP] Circuit S1nonbarrel_neurons
+[INFO] Processing edge file /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/S1nonbarrel_neurons__S1nonbarrel_neurons__chemical/edges.h5, pop: S1nonbarrel_neurons__S1nonbarrel_neurons__chemical
+[INFO] Init SynapseRuleManager. Options: {'load_offsets': False, 'dry_run_stats': None}
+[INFO] Loading connections to population: <ConnectionSet: 2969-2969 (S1nonbarrel_neurons->S1nonbarrel_neurons)>
+[INFO] Creating group connections (3 groups match)
+[INFO]  * Pathway hex_O1 -> hex_O1. Created 87457567 connections
+[STEP] Circuit VPM
+[INFO]  => No connectivity set as internal. See projections
+[STEP] Handling projections...
+[INFO] Processing Edge file: /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/midrange__S1nonbarrel_neurons__chemical/edges.h5
+[INFO]  * midrange__S1nonbarrel_neurons__chemical__S1nonbarrel_neurons-S1nonbarrel_neurons (Type: ConnectionTypes.Synaptic, Src: S1nonbarrel_neurons, Dst: S1nonbarrel_neurons)
+[INFO] Loading connections to population: <ConnectionSet: 2969-2969 (S1nonbarrel_neurons->S1nonbarrel_neurons)>
+[INFO] Creating group connections (3 groups match)
+[INFO]  * Pathway hex_O1 -> hex_O1. Created 874938 connections
+[INFO] Processing Edge file: /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/POm__S1nonbarrel_neurons__chemical/edges.h5
+[INFO]  * POm__S1nonbarrel_neurons__chemical__POm-S1nonbarrel_neurons (Type: ConnectionTypes.Synaptic, Src: POm, Dst: S1nonbarrel_neurons)
+[INFO] Loading connections to population: <ConnectionSet: 1166-2969 (POm->S1nonbarrel_neurons)>
+[INFO] No matching Connection blocks. Loading all synapses...
+|-------20%-------40%-------60%-------80%------100%| [Time taken: 0.45 s]
+[INFO]  * [ALL]. Created 7651528 connections
+[INFO] Processing Edge file: /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/VPM__S1nonbarrel_neurons__chemical/edges.h5
+[INFO]  * VPM__S1nonbarrel_neurons__chemical__VPM-S1nonbarrel_neurons (Type: ConnectionTypes.Synaptic, Src: VPM, Dst: S1nonbarrel_neurons)
+[INFO] Loading connections to population: <ConnectionSet: 2134-2969 (VPM->S1nonbarrel_neurons)>
+[INFO] Creating group connections (1 groups match)
+[INFO]  * Pathway proj_Thalamocortical_VPM_Source -> Layer23Excitatory. Created 9295647 connections
+[STEP] Configuring connections...
+[INFO]  * Pathway hex_O1 -> hex_O1
+[INFO]  => Configured 8.83325e+07 connections
+[INFO]  * Pathway hex_O1 -> hex_O1:	[DELAYED] t=0.025, weight=0
+[INFO]  => Configured 8.83325e+07 connections
+[INFO]  * Pathway hex_O1 -> hex_O1:	[DELAYED] t=1000, weight=1
+[INFO]  => Configured 8.83325e+07 connections
+[INFO]  * Pathway proj_Thalamocortical_VPM_Source -> Layer23Excitatory
+[INFO]  => Configured 1.51309e+06 connections
+[INFO] Done, but waiting for all ranks
+[INFO] Memusage (RSS) per node [MB]: Max=27181.00, Min=26666.49, Mean(Stdev)=26952.37(144.09)
+[INFO] Memusage (RSS) per task [MB]: Max=719.82, Min=634.48, Mean(Stdev)=673.81(14.35)
+[STEP] ================ INSTANTIATING SIMULATION ================
+[STEP] Handling Replay
+[INFO]  * [SYN REPLAY] injectStimulus_spikeReplayVPM (Stimulus_spikeReplayVPM -> hex_O1, time shift: 0, delay: 0)
+[INFO]   > No replay for src population: 'S1nonbarrel_neurons'
+[INFO] => Population pathway VPM -> S1nonbarrel_neurons. Source offset: 4467000
+[INFO]  => Replaying on 118893 connections
+[INFO]   > No replay for src population: 'POm'
+[INFO] Memusage (RSS) per node [MB]: Max=27181.00, Min=26666.49, Mean(Stdev)=26952.37(144.09)
+[INFO] Memusage (RSS) per task [MB]: Max=719.82, Min=634.48, Mean(Stdev)=673.81(14.35)
+[STEP] Creating connections in the simulator
+[INFO] Instantiating synapses... Params: {'replay_mode': <ReplayMode.AS_REQUIRED: 1>}
+[INFO]  * Connections among S1nonbarrel_neurons -> S1nonbarrel_neurons, attach src: True
+Pop:(2969, 2969)|-------20%-------40%-------60%-------80%------100%| [Time taken: 44.03 s]
+[INFO]  => Created 408387320 synapses
+[INFO] Instantiating synapses... Params: {'replay_mode': <ReplayMode.AS_REQUIRED: 1>}
+[INFO]  * Connections among POm -> S1nonbarrel_neurons, attach src: False
+Pop:(1166, 2969)|-------20%-------40%-------60%-------80%------100%| [Time taken: 2.04 s]
+[INFO]  => Created 19463369 synapses
+[INFO] Instantiating synapses... Params: {'replay_mode': <ReplayMode.AS_REQUIRED: 1>}
+[INFO]  * Connections among VPM -> S1nonbarrel_neurons, attach src: False
+Pop:(2134, 2969)|-------20%-------40%-------60%-------80%------100%| [Time taken: 2.94 s]
+[INFO]  => Created 29721876 synapses
+[INFO] Memusage (RSS) per node [MB]: Max=69779.54, Min=67278.10, Mean(Stdev)=68611.30(651.59)
+[INFO] Memusage (RSS) per task [MB]: Max=1977.36, Min=1533.95, Mean(Stdev)=1715.28(65.24)
+[STEP] Stimulus Apply.
+[INFO] Instantiating Stimulus Injects:
+[INFO]  * [STIM] injectStimulus_gExc_L1: Stimulus_gExc_L1 (RelativeOrnsteinUhlenbeck) -> Layer1Inhibitory
+[INFO]  * [STIM] injectStimulus_gExc_L23E: Stimulus_gExc_L23E (RelativeOrnsteinUhlenbeck) -> Layer23Excitatory
+[INFO]  * [STIM] injectStimulus_gExc_L23I: Stimulus_gExc_L23I (RelativeOrnsteinUhlenbeck) -> Layer23Inhibitory
+[INFO]  * [STIM] injectStimulus_gExc_L4E: Stimulus_gExc_L4E (RelativeOrnsteinUhlenbeck) -> Layer4Excitatory
+[INFO]  * [STIM] injectStimulus_gExc_L4I: Stimulus_gExc_L4I (RelativeOrnsteinUhlenbeck) -> Layer4Inhibitory
+[INFO]  * [STIM] injectStimulus_gExc_L5E: Stimulus_gExc_L5E (RelativeOrnsteinUhlenbeck) -> Layer5Excitatory
+[INFO]  * [STIM] injectStimulus_gExc_L5I: Stimulus_gExc_L5I (RelativeOrnsteinUhlenbeck) -> Layer5Inhibitory
+[INFO]  * [STIM] injectStimulus_gExc_L6E: Stimulus_gExc_L6E (RelativeOrnsteinUhlenbeck) -> Layer6Excitatory
+[INFO]  * [STIM] injectStimulus_gExc_L6I: Stimulus_gExc_L6I (RelativeOrnsteinUhlenbeck) -> Layer6Inhibitory
+[INFO] Memusage (RSS) per node [MB]: Max=72238.34, Min=69475.95, Mean(Stdev)=70935.74(700.57)
+[INFO] Memusage (RSS) per task [MB]: Max=2040.49, Min=1595.79, Mean(Stdev)=1773.39(65.40)
+[STEP] Enabling modifications...
+[STEP] Reports Enabling
+[WARNING] SonataError for nodeset Mosaic from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Mosaic from population "VPM" : No such attribute: 'mtype', skip
+[INFO]  * lfp_report (Type: lfp, Target: Mosaic, Dt: 1.000000)
+[INFO] Adding report lfp_report.h5 for CoreNEURON with 4234929 gids
+[INFO] Memusage (RSS) per node [MB]: Max=77416.47, Min=74656.87, Mean(Stdev)=76117.43(700.85)
+[INFO] Memusage (RSS) per task [MB]: Max=2170.50, Min=1725.55, Mean(Stdev)=1902.94(65.39)
+[INFO] Preparing to run simulation...
+[INFO] Executing actions after stdinit...
+[STEP] Dataset generation for CoreNEURON
+[INFO] SHM file transfer mode for CoreNEURON enabled
+[INFO] Writing sim config file: /gpfs/bbp.cscs.ch/project/proj85/lfp/osCSD/2/reporting/sim.conf
+[INFO]  => Dataset written to '/dev/shm/sim-hpc/2543154/gpfs/bbp.cscs.ch/project/proj85/lfp/osCSD/2/reporting/coreneuron_input'
+[STEP] ======================= SIMULATION =======================
+[INFO] Memusage (RSS) per node [MB]: Max=86245.96, Min=83189.96, Mean(Stdev)=84826.28(777.20)
+[INFO] Memusage (RSS) per task [MB]: Max=2414.13, Min=1917.14, Mean(Stdev)=2120.66(73.76)
+[INFO] Clearing model
+[INFO] malloc_trim: memory released back to the system.
+[INFO] Memusage (RSS) per node [MB]: Max=22965.23, Min=22421.34, Mean(Stdev)=22729.46(151.44)
+[INFO] Memusage (RSS) per task [MB]: Max=615.19, Min=525.12, Mean(Stdev)=568.24(15.40)
+[INFO] Launching simulation with CoreNEURON
+ num_mpi=1600
+
+ 
+ Duke, Yale, and the BlueBrain Project -- Copyright 1984-2020
+ Version : 9.0.0 c48d7d5bd (2024-07-18 16:45:23 +0200)
+ 
+ Additional mechanisms from files
+ ALU.mod Ca.mod CaDynamics_DC0.mod CaDynamics_E2.mod Ca_HVA.mod Ca_HVA2.mod Ca_LVAst.mod ConductanceSource.mod CoreNEURONArtificialCell.mod DetAMPANMDA.mod DetGABAAB.mod GluSynapse.mod Ih.mod Im.mod K_Pst.mod K_Tst.mod KdShu2007.mod Kv7.mod MembraneCurrentSource.mod NaTa_t.mod NaTg.mod NaTg_axon.mod NaTg_persistent_axon.mod NaTg_persistent_somadend.mod NaTg_somadend.mod NaTs2_t.mod Nap_Et2.mod ProbAMPANMDA_EMS.mod ProbGABAAB_EMS.mod SK_E2.mod SKv3_1.mod SonataReportHelper.mod SonataReports.mod StochKv.mod StochKv3.mod TTXDynamicsSwitch.mod exp2syn.mod expsyn.mod gap.mod hh.mod netstim.mod netstim_inhpoisson.mod passive.mod pattern.mod stim.mod svclmp.mod vecevent.mod
+
+ Memory (MBs) :             After mk_mech : Max 617.6094, Min 525.5273, Avg 568.9360 
+ Memory (MBs) :            After MPI_Init : Max 633.8320, Min 541.6719, Avg 585.3270 
+ Memory (MBs) :          Before nrn_setup : Max 633.8828, Min 541.8203, Avg 585.4500 
+ Setup Done   : 9.15 seconds 
+ Model size   : 529.87 GB
+ Memory (MBs) :          After nrn_setup  : Max 1412.6680, Min 1133.0859, Avg 1258.8797 
+GENERAL PARAMETERS
+--mpi=true
+--mpi-lib=/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neuron-9.0.a17-vwod6s/lib/libcorenrnmpi_mpich.so
+--gpu=false
+--dt=0.025
+--tstop=3000
+
+GPU
+--nwarp=65536
+--cell-permute=0
+--cuda-interface=false
+
+INPUT PARAMETERS
+--voltage=1000
+--seed=632
+--datpath=/dev/shm/sim-hpc/2543154/gpfs/bbp.cscs.ch/project/proj85/lfp/osCSD/2/reporting/coreneuron_input
+--filesdat=files.dat
+--pattern=
+--report-conf=/gpfs/bbp.cscs.ch/project/proj85/lfp/osCSD/2/reporting/report.conf
+--restore=     
+
+PARALLEL COMPUTATION PARAMETERS
+--threading=false
+--skip_mpi_finalize=true
+
+SPIKE EXCHANGE
+--ms_phases=2
+--ms_subintervals=2
+--multisend=false
+--spk_compress=3
+--binqueue=false
+
+CONFIGURATION
+--spikebuf=100000
+--prcellgid=-1
+--forwardskip=0
+--celsius=34
+--mindelay=0.1
+--report-buffer-size=4
+
+OUTPUT PARAMETERS
+--dt_io=0.1
+--outpath=/gpfs/bbp.cscs.ch/project/proj85/lfp/osCSD/2/reporting
+--checkpoint=
+
+ Start time (t) = 0
+
+ Memory (MBs) :  After mk_spikevec_buffer : Max 1412.6680, Min 1133.0859, Avg 1258.8799 
+ Memory (MBs) :     After nrn_finitialize : Max 1424.4805, Min 1133.5117, Avg 1263.3380 
+[REPORTS] [info] :: Initializing PARALLEL implementation...
+[REPORTS] [info] :: Initializing communicators and preparing SONATA datasets
+
+psolve |                                                         | t: 0.00   ETA: 0h00m00spsolve |                                                         | t: 2.88   ETA: 1h26m52spsolve |                                                         | t: 5.38   ETA: 1h32m51spsolve |                                                         | t: 7.88   ETA: 1h34m59spsolve |                                                         | t: 14.00  ETA: 1h32m25spsolve |                                                         | t: 20.00  ETA: 1h31m53spsolve |                                                         | t: 26.00  ETA: 1h31m30spsolve |                                                         | t: 32.00  ETA: 1h31m12spsolve |                                                         | t: 38.00  ETA: 1h30m56spsolve |                                                         | t: 44.38  ETA: 1h29m55spsolve |                                                         | t: 50.38  ETA: 1h29m46spsolve |=                                                        | t: 56.38  ETA: 1h29m38spsolve |=                                                        | t: 62.38  ETA: 1h29m28spsolve |=                                                        | t: 68.38  ETA: 1h29m19spsolve |=                                                        | t: 74.38  ETA: 1h29m09spsolve |=                                                        | t: 78.88  ETA: 1h30m44spsolve |=                                                        | t: 84.88  ETA: 1h30m26spsolve |=                                                        | t: 90.88  ETA: 1h30m10spsolve |=                                                        | t: 96.88  ETA: 1h29m54spsolve |=                                                        | t: 102.88 ETA: 1h29m38spsolve |==                                                       | t: 109.38 ETA: 1h28m58spsolve |==                                                       | t: 115.38 ETA: 1h28m45spsolve |==                                                       | t: 121.38 ETA: 1h28m32spsolve |==                                                       | t: 127.38 ETA: 1h28m19spsolve |==                                                       | t: 133.38 ETA: 1h28m07spsolve |==                                                       | t: 139.38 ETA: 1h27m54spsolve |==                                                       | t: 145.38 ETA: 1h27m42spsolve |==                                                       | t: 151.37 ETA: 1h27m30spsolve |==                                                       | t: 156.00 ETA: 1h28m06spsolve |===                                                      | t: 162.00 ETA: 1h27m53spsolve |===                                                      | t: 168.00 ETA: 1h27m39spsolve |===                                                      | t: 174.50 ETA: 1h27m10spsolve |===                                                      | t: 180.50 ETA: 1h26m57spsolve |===                                                      | t: 186.50 ETA: 1h26m44spsolve |===                                                      | t: 192.50 ETA: 1h26m32spsolve |===                                                      | t: 198.50 ETA: 1h26m19spsolve |===                                                      | t: 204.50 ETA: 1h26m07spsolve |===                                                      | t: 210.50 ETA: 1h25m54spsolve |====                                                     | t: 216.50 ETA: 1h25m42spsolve |====                                                     | t: 222.50 ETA: 1h25m30spsolve |====                                                     | t: 228.50 ETA: 1h25m18spsolve |====                                                     | t: 234.00 ETA: 1h25m18spsolve |====                                                     | t: 240.00 ETA: 1h25m06spsolve |====                                                     | t: 246.00 ETA: 1h24m53spsolve |====                                                     | t: 252.00 ETA: 1h24m41spsrun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 2543154.0 ON r2i4n4 CANCELLED AT 2024-09-27T14:34:59 ***
+slurmstepd: error: *** JOB 2543154 ON r2i4n4 CANCELLED AT 2024-09-27T14:34:59 ***

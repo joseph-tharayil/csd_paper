@@ -1,0 +1,211 @@
+neuron(101):ERROR:105: Unable to locate a modulefile for 'neuron/develop'
+numprocs=1600
+NEURON -- VERSION 9.0a-307-gc48d7d5bd+ HEAD (c48d7d5bd+) 2024-07-18
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2022
+See http://neuron.yale.edu/neuron/credits
+
+Additional mechanisms from files
+ "mod/ALU.mod" "mod/CaDynamics_DC0.mod" "mod/CaDynamics_E2.mod" "mod/Ca_HVA2.mod" "mod/Ca_HVA.mod" "mod/Ca_LVAst.mod" "mod/Ca.mod" "mod/ConductanceSource.mod" "mod/CoreNEURONArtificialCell.mod" "mod/DetAMPANMDA.mod" "mod/DetGABAAB.mod" "mod/gap.mod" "mod/GluSynapse.mod" "mod/Ih.mod" "mod/Im.mod" "mod/KdShu2007.mod" "mod/K_Pst.mod" "mod/K_Tst.mod" "mod/Kv7.mod" "mod/MembraneCurrentSource.mod" "mod/Nap_Et2.mod" "mod/NaTa_t.mod" "mod/NaTg_axon.mod" "mod/NaTg.mod" "mod/NaTg_persistent_axon.mod" "mod/NaTg_persistent_somadend.mod" "mod/NaTg_somadend.mod" "mod/NaTs2_t.mod" "mod/netstim_inhpoisson.mod" "mod/ProbAMPANMDA_EMS.mod" "mod/ProbGABAAB_EMS.mod" "mod/SK_E2.mod" "mod/SKv3_1.mod" "mod/SonataReportHelper.mod" "mod/SonataReports.mod" "mod/StochKv3.mod" "mod/StochKv.mod" "mod/TTXDynamicsSwitch.mod" "mod/vecevent.mod"
+[STEP] Initializing Neurodamus... Logfile: pydamus_2024-10-21_11h01.log
+[INFO]  => Neurodamus Mod & Hoc lib loaded.
+[INFO] Checking for plugins...
+[INFO]  => Engines Available: ['Base', 'NGV', 'METype']
+[INFO]   : Connections Types: [<ConnectionTypes.NeuroGlial: 'NeuroGlial'>, <ConnectionTypes.GlioVascular: 'GlioVascular'>, None, <ConnectionTypes.Synaptic: 'Synaptic'>, <ConnectionTypes.GapJunction: 'GapJunction'>, <ConnectionTypes.NeuroModulation: 'NeuroModulation'>]
+[STEP] Setting up Neurodamus configuration
+[INFO] Initializing Simulation Configuration and Validation
+[INFO] Valid CoreNeuron input data not found in '/dev/shm/sim-hpc/2597506/gpfs/bbp.cscs.ch/data/scratch/proj85/lfp/radii/1/reporting/coreneuron_input'. Neurodamus will proceed to model building.
+[INFO] Checking simulation requirements
+[INFO] Initializing hoc config objects
+As of Oct 2020 Neurodamus uses Random123 as default
+[INFO] User-defined RNG base seed 814.0
+[WARNING] Some node set rules were replaced from /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/node_sets.json
+[INFO] Memusage (RSS) per node [MB]: Max=5102.85, Min=5100.90, Mean(Stdev)=5101.91(0.83)
+[INFO] Memusage (RSS) per task [MB]: Max=132.14, Min=127.48, Mean(Stdev)=127.68(0.70)
+[INFO] Checking Connection Configurations
+[WARNING] Delayed connection disconnect is not overriding any weight=0 Connection
+[WARNING] Delayed connection reconnect is not overriding any weight=0 Connection
+[INFO]  => CHECK No Global vars!
+[INFO]  => CHECK No Block Overrides!
+[INFO]  => CHECK No single Weight=0 blocks!
+[STEP] ================ CALCULATING LOAD BALANCE ================
+[STEP] Computing Load Balance
+[INFO] Activating experimental LB for Sonata circuit 'S1nonbarrel_neurons'
+[INFO] Memusage (RSS) per node [MB]: Max=5473.25, Min=5458.61, Mean(Stdev)=5460.13(2.38)
+[INFO] Memusage (RSS) per task [MB]: Max=144.65, Min=136.33, Mean(Stdev)=136.50(0.53)
+[STEP] ==================== BUILDING CIRCUIT ====================
+[WARNING] SonataError for nodeset Layer4Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer23Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer1Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer1Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer6Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Excitatory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Excitatory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer4Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Inhibitory from population "POm" : No such attribute: 'mtype', skip
+[WARNING] SonataError for nodeset Layer5Inhibitory from population "VPM" : No such attribute: 'mtype', skip
+[STEP] LOADING NODES
+[INFO] Load-balance object not present. Continuing Round-Robin...
+[INFO]  => (default) Circuit has been disabled
+[STEP] Circuit POm
+[STEP] Circuit S1nonbarrel_neurons
+[INFO] Reading Nodes (METype) info from '/gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/nodes/S1nonbarrel_neurons/nodes.h5'
+[INFO]  -> Distributing 'S1nonbarrel_neurons:hex_O1' target cells Round-Robin
+[INFO]  => Loaded info about 211712 target cells (out of 4234929)
+[STEP] Circuit VPM
+[WARNING] For non-sonata circuit, only a single Virtual Cell Population works with REPLAY
+[INFO] Reading LFP configuration info from '/gpfs/bbp.cscs.ch/data/scratch/proj85/lfp/electrodes/coeffs_radii.h5'
+/gpfs/bbp.cscs.ch/ssd/apps/bsd/2024-02-01/stage_applications/install_gcc-12.3.0-skylake/py-numpy-1.26.1-elr5pn/lib/python3.11/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/gpfs/bbp.cscs.ch/ssd/apps/bsd/2024-02-01/stage_applications/install_gcc-12.3.0-skylake/py-numpy-1.26.1-elr5pn/lib/python3.11/site-packages/numpy/core/getlimits.py:549: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+[STEP] FINALIZING CIRCUIT CELLS
+[STEP] Circuit (default)
+[STEP] Circuit S1nonbarrel_neurons
+[INFO] Finalizing cells... Gid offset: 232000
+[INFO]  > Instantiating cells... (133 in Rank 0)
+|-------20%-------40%-------60%-------80%------100%| [Time taken: 60.81 s]
+[INFO]  > Updating targets
+[INFO]  > Initializing cell network
+[INFO] Memusage (RSS) per node [MB]: Max=14289.32, Min=14079.32, Mean(Stdev)=14172.13(49.17)
+[INFO] Memusage (RSS) per task [MB]: Max=374.19, Min=339.16, Mean(Stdev)=354.31(5.93)
+[STEP] LOADING CIRCUIT CONNECTIVITY
+[STEP] Circuit (default)
+[INFO]  => No connectivity set as internal. See projections
+[STEP] Circuit POm
+[INFO]  => No connectivity set as internal. See projections
+[STEP] Circuit S1nonbarrel_neurons
+[INFO] Processing edge file /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/S1nonbarrel_neurons__S1nonbarrel_neurons__chemical/edges.h5, pop: S1nonbarrel_neurons__S1nonbarrel_neurons__chemical
+[INFO] Init SynapseRuleManager. Options: {'load_offsets': False, 'dry_run_stats': None}
+[INFO] Loading connections to population: <ConnectionSet: 2969-2969 (S1nonbarrel_neurons->S1nonbarrel_neurons)>
+[INFO] Creating group connections (3 groups match)
+[INFO]  * Pathway hex_O1 -> hex_O1. Created 87457567 connections
+[STEP] Circuit VPM
+[INFO]  => No connectivity set as internal. See projections
+[STEP] Handling projections...
+[INFO] Processing Edge file: /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/midrange__S1nonbarrel_neurons__chemical/edges.h5
+[INFO]  * midrange__S1nonbarrel_neurons__chemical__S1nonbarrel_neurons-S1nonbarrel_neurons (Type: ConnectionTypes.Synaptic, Src: S1nonbarrel_neurons, Dst: S1nonbarrel_neurons)
+[INFO] Loading connections to population: <ConnectionSet: 2969-2969 (S1nonbarrel_neurons->S1nonbarrel_neurons)>
+[INFO] Creating group connections (3 groups match)
+[INFO]  * Pathway hex_O1 -> hex_O1. Created 874938 connections
+[INFO] Processing Edge file: /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/POm__S1nonbarrel_neurons__chemical/edges.h5
+[INFO]  * POm__S1nonbarrel_neurons__chemical__POm-S1nonbarrel_neurons (Type: ConnectionTypes.Synaptic, Src: POm, Dst: S1nonbarrel_neurons)
+[INFO] Loading connections to population: <ConnectionSet: 1166-2969 (POm->S1nonbarrel_neurons)>
+[INFO] No matching Connection blocks. Loading all synapses...
+|-------20%-------40%-------60%-------80%------100%| [Time taken: 0.45 s]
+[INFO]  * [ALL]. Created 7651528 connections
+[INFO] Processing Edge file: /gpfs/bbp.cscs.ch/project/proj83/circuits/Bio_M/20200805-pure-sonata/networks/edges/VPM__S1nonbarrel_neurons__chemical/edges.h5
+[INFO]  * VPM__S1nonbarrel_neurons__chemical__VPM-S1nonbarrel_neurons (Type: ConnectionTypes.Synaptic, Src: VPM, Dst: S1nonbarrel_neurons)
+[INFO] Loading connections to population: <ConnectionSet: 2134-2969 (VPM->S1nonbarrel_neurons)>
+[INFO] No matching Connection blocks. Loading all synapses...
+|-------20%-------40%-------60%-------80%------100%| [Time taken: 0.73 s]
+[INFO]  * [ALL]. Created 9295647 connections
+[STEP] Configuring connections...
+[INFO]  * Pathway hex_O1 -> hex_O1
+[INFO]  => Configured 8.83325e+07 connections
+[INFO]  * Pathway hex_O1 -> hex_O1:	[DELAYED] t=0.025, weight=0
+[INFO]  => Configured 8.83325e+07 connections
+[INFO]  * Pathway hex_O1 -> hex_O1:	[DELAYED] t=1000, weight=1
+[INFO]  => Configured 8.83325e+07 connections
+[INFO] Done, but waiting for all ranks
+[INFO] Memusage (RSS) per node [MB]: Max=27169.62, Min=26655.44, Mean(Stdev)=26944.73(138.30)
+[INFO] Memusage (RSS) per task [MB]: Max=720.55, Min=633.56, Mean(Stdev)=673.62(14.33)
+[STEP] ================ INSTANTIATING SIMULATION ================
+[STEP] Handling Replay
+[INFO]  * [SYN REPLAY] injectStimulus_spikeReplayVPM (Stimulus_spikeReplayVPM -> hex_O1, time shift: 0, delay: 0)
+[INFO]   > No replay for src population: 'S1nonbarrel_neurons'
+[INFO]   > No replay for src population: 'POm'
+[CRITICAL] (rank 796) Unhandled Exception. Terminating...
+Traceback (most recent call last):
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/commands.py", line 86, in neurodamus
+    Neurodamus(config_file, True, logging_level=log_level, **options).run()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/node.py", line 1594, in __init__
+    self._instantiate_simulation()
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/node.py", line 1692, in _instantiate_simulation
+    self._build_model()
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/node.py", line 1617, in _build_model
+    self.enable_replay()
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/core/_utils.py", line 37, in mpi_ok_wrapper
+    res = f(*args, **kw)
+          ^^^^^^^^^^^^^^
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/node.py", line 741, in enable_replay
+    self._enable_replay(source, target, stim, tshift, delay, connectivity_type)
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/node.py", line 757, in _enable_replay
+    spike_manager = SpikeManager(spike_filepath, tshift, src_pop)  # Disposable
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/bbp.cscs.ch/ssd/apps/bsd/2024-02-01/stage_externals/install_gcc-12.3.0-skylake/python-3.11.6-bj4i6m/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/replay.py", line 35, in __init__
+    self.open_spike_file(spike_filename, delay, population)
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/replay.py", line 50, in open_spike_file
+    tvec, gidvec = self._read_spikes_sonata(filename, population)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_gcc-12.3.0-skylake/py-neurodamus-develop-hzm7l7/lib/python3.11/site-packages/neurodamus/replay.py", line 67, in _read_spikes_sonata
+    spikes = spikes_file[population]
+             ~~~~~~~~~~~^^^^^^^^^^^^
+RuntimeError: Unable to open the attribute "units": (Attribute) Object not found
+MPT ERROR: Rank 505(g:505) is aborting with error code 56423680.
+	Process ID: 235746, Host: r4i5n8, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 1220(g:1220) is aborting with error code 56423648.
+	Process ID: 234861, Host: r4i6n8, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 584(g:584) is aborting with error code 56423680.
+	Process ID: 234442, Host: r4i5n10, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 765(g:765) is aborting with error code 56423680.
+	Process ID: 245465, Host: r4i5n15, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 383(g:383) is aborting with error code 56423680.
+	Process ID: 2058, Host: r4i5n5, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 1137(g:1137) is aborting with error code 56423648.
+	Process ID: 301305, Host: r4i6n6, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 1275(g:1275) is aborting with error code 56423648.
+	Process ID: 221389, Host: r4i6n9, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 1171(g:1171) is aborting with error code 56423648.
+	Process ID: 226509, Host: r4i6n7, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 1027(g:1027) is aborting with error code 56423648.
+	Process ID: 241992, Host: r4i6n3, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 528(g:528) is aborting with error code 56550592.
+	Process ID: 225810, Host: r4i5n9, Program: /gpfs/bbp.cscs.ch/home/tharayil/spack_install/software/install_oneapi-2023.2.0-skylake/neurodamus-models-develop-lfszlp/bin/special
+	MPT Version: HPE HMPT 2.27  12/20/23 18:45:04
+
+MPT: --------stack traceback-------
+slurmstepd: error: *** STEP 2597506.0 ON r3i7n18 CANCELLED AT 2024-10-21T11:30:43 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: Timed out waiting for job step to complete
+srun: error: r3i7n18: tasks 0-39: Killed
+srun: launch/slurm: _step_signal: Terminating StepId=2597506.0
+srun: error: r4i6n9: tasks 1240-1266,1268-1279: Killed
