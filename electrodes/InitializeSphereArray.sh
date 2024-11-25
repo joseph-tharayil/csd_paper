@@ -16,4 +16,4 @@
 spack env activate bluerecording-dev
 source ~/bluerecording-dev/bin/activate
 
-srun -n 1 python run_initialize_h5.py 'electrode_csv_notSphere.csv' 'simulation_config.json' 'coeffs_notSphere.h5' 
+srun -n 1 python run_initialize_h5.py 'electrode_csv_sphere_noOverlap.csv' 'simulation_config.json' 'coeffs_sphere_noOverlap.h5' 

@@ -17,11 +17,11 @@ for i in range(10):
     for file in os.listdir(str(i)+'/pkls'):
         t = file.split('.')[0].split('g')[1]
         if i == 0:
-            EEGs[t] = signal.sosfilt(sos,pd.read_pickle(str(i)+'/pkls/'+file),axis=0)
+            EEGs[t] = pd.read_pickle(str(i)+'/pkls/'+file)
         else:
             
             try:
-                EEGs[t] += signal.sosfilt(sos,pd.read_pickle(str(i)+'/pkls/'+file),axis=0)
+                EEGs[t] += pd.read_pickle(str(i)+'/pkls/'+file)
             except:
                 pass
 

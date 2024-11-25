@@ -41,9 +41,9 @@ if __name__=='__main__':
 
     index = 0
 
-    kList = -2082/2 + np.array([350,700+525/2,700+525+190/2,700+525+190+353/2])
+    kList = np.array([-2082/2]) # + np.array([350,700+525/2,700+525+190/2,700+525+190+353/2])
 
-    heightList = [350,int(525/2),int(190/2),int(353/2)]
+    heightList = [2082/2]#[350,int(525/2),int(190/2),int(353/2)]
 
     electrodeTypeList = []
 
@@ -53,9 +53,9 @@ if __name__=='__main__':
 
             for i in np.arange(-2,3):
 
-                probeList.append([i*20,j*20,k])
+                probeList.append([i*40,j*40,k])
 
-                electrodeTypeList.append('ObjectiveCSD_Disk_10_'+str(heightList[x]))
+                electrodeTypeList.append('ObjectiveCSD_Disk_20_'+str(heightList[x]))
 
     electrodePositions = np.array(probeList)
 

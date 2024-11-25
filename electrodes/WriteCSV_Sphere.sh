@@ -11,4 +11,4 @@
 module load unstable py-mpi4py
 source ~/bluerecording-dev/bin/activate
 
-srun -n 1 python writeCSV_notSphere.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_notSphere.csv'
+srun -n 1 python writeCSV_sphere_noOverlap.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_sphere_noOverlap.csv'
