@@ -5,7 +5,7 @@
 **/*.ipynb_checkpoints
 _projections_cache_/
 **/*.err
-**/.out
+**/*.out
 pkls/
 **/*.png
 **/*.dat
