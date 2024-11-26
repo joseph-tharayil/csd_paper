@@ -11,4 +11,4 @@
 module load unstable py-mpi4py
 source ~/bluerecording-dev/bin/activate
 
-srun -n 1 python writeCSV_smallRadii.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_smallRadii.csv'
+srun -n 1 python writeCSV_column.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_column.csv'

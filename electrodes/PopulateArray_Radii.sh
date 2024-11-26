@@ -1,19 +1,22 @@
 #!/bin/bash -l
 #SBATCH --job-name="EEG_2_CoordsV"
 #SBATCH --partition=prod
-#SBATCH --nodes=1
+#SBATCH --nodes=200
 #SBATCH -C clx
 #SBATCH --cpus-per-task=2
-#SBATCH --time=2:00:00
+#SBATCH --time=24:00:00
 ##SBATCH --mail-type=ALL
 #SBATCH --account=proj85
 #SBATCH --no-requeue
-#SBATCH --output=EEG_sonata_CoordsV.out
-#SBATCH --error=EEG_sonata_CoordsV.err
+#SBATCH --output=EEG_2_CoordsV.out
+#SBATCH --error=EEG_2_CoordsV.err
 #SBATCH --exclusive
 #SBATCH --mem=0
 
 spack env activate bluerecording-dev
 source ~/bluerecording-dev/bin/activate
 
-srun -n 1 python run_initialize_h5.py 'electrode_csv_smallRadii.csv' 'simulation_config.json' 'coeffs_smallRadii.h5' 
+NEURONS_PER_FILE=1000
+FILES_PER_FOLDER=50
+
+arun -n 6000 python run_write_weights.py 'simulation_config.json' 'positions' 'coeffs_radii.h5' $NEURONS_PER_FILE $FILES_PER_FOLDER '0.374556'
