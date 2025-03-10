@@ -22,35 +22,42 @@ This paper relies on the BlueRecording workflow described in [this paper](https:
 
 In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae implemented in this notebook (Eq. 5 and 6 in the paper) are derived using the Mathematica notebook csds.nb and limitCase.nb, respectively.
 
-## Reproducing Figure 2
-Generate electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
-- In the folder `electrodes`, run `WriteCSV_HighRes.sh` to generate the csv file that defines the electrode array.
-- Run `InitializeArray_HighRes.sh` to initialize the h5 file read by Neurodamus
-- Run `PopulateArray_HighRes.sh` to populate the h5 file created in the previous step.
+## Reproducing Figures 2-4
 
-Then launch the simulations in the folder `highRes` by running the script `launch.sh` in each of the subfolders. LFP and $o_DCSD$ signal contributions from each cell in the simulation will be calculated.
+In order to create electrode files to calculate the LFP signals from neural simulations, the positions of the neural segments in the model must be calculated:
+- In the folder `electrodes`, run `launch.sh` to generate a 1-timestep compartment report (i.e., an h5 file that lists each of the neural segments in the model.
+- In the same folder, run `GetPositions.sh` to interpolate the 3D positions of each of these neural segments
 
-Next, sum the LFP and $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the `highRes` folder.
+### Reproducing Figure 2
+1. Generate electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
+   * a. In the folder `electrodes`, run `WriteCSV_HighRes.sh` to generate the csv file that defines the electrode array.
+   * b. Run `InitializeArray_HighRes.sh` to initialize the h5 file read by Neurodamus
+   * c. Run `PopulateArray_HighRes.sh` to populate the h5 file created in the previous step.
 
-Finally, run the notebook `csdCorrelations.ipynb` to generate Figure 2.
+2. Then launch the simulations in the folder `highRes` by running the script `launch.sh` in each of the subfolders. LFP and $o_DCSD$ signal contributions from each cell in the simulation will be calculated.
 
-## Reproducing Figure 3 and 4
-Generate electrode arrays with 20 $\mu m$ spacing to calculate $o_DCSD$ with various radii $\rho$
+3. Next, sum the LFP and $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the `highRes` folder.
+
+4. Finally, run the notebook `csdCorrelations.ipynb` to generate Figure 2.
+
+### Reproducing Figures 3 and 4
+
+1. Generate electrode arrays with 20 $\mu m$ spacing to calculate $o_DCSD$ with various radii $\rho$
 - In the folder `electrodes`, run `WriteCSV_Radii.sh` to generate the csv file that defines the electrode array.
 - Run `InitializeArray_Radii.sh` to initialize the h5 file read by Neurodamus
 - Run `PopulateArray_Radii.sh` to populate the h5 file created in the previous step.
 
-Then launch the simulations in the folder `radii` by running the script `launch.sh` in each of the subfolders.
+2. Then launch the simulations in the folder `radii` by running the script `launch.sh` in each of the subfolders.
 
-Next, sum the $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the folder `radii`
+3. Next, sum the $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the folder `radii`
 
-Run the notebook `derivatives.ipynb` to generate the weights file that calculated non-negative CSD (nnCSD). Briefly, this notebook takes the negative second derivative of the LFP weights calculated above, and zeros out the negative values.
+4. Run the notebook `derivatives.ipynb` to generate the weights file that calculated non-negative CSD (nnCSD). Briefly, this notebook takes the negative second derivative of the LFP weights calculated above, and zeros out the negative values.
 
-Launch the simulations in the folder `secondDeriv` by running the script `launch.sh` in each of the subfolders; this will calculate the nnCSD.
+5. Launch the simulations in the folder `secondDeriv` by running the script `launch.sh` in each of the subfolders; this will calculate the nnCSD.
 
-Next, sum the $nnCSD$ signals over cells by running the script `Geteeg.sh` in the folder `secondDeriv`
+6. Next, sum the $nnCSD$ signals over cells by running the script `Geteeg.sh` in the folder `secondDeriv`
 
-Finally, run the notebook `csdCorrelations_radii.ipynb` to generate Figures 3 and 4.
+7. Finally, run the notebook `csdCorrelations_radii.ipynb` to generate Figures 3 and 4.
 
 # Acknowledgment
 The development of this software was supported by funding to the Blue Brain Project, a research center of the École polytechnique fédérale de Lausanne (EPFL), from the Swiss government's ETH Board of the Swiss Federal Institutes of Technology.
