@@ -2,16 +2,16 @@
 
 This branch of the repository contains code used to generate Figure 2e in the paper [Computational modeling reveals biological mechanisms underlying the whisker-flick EEG](https://www.biorxiv.org/content/10.1101/2024.12.13.628364v1.full). Steps to reproduce that figure are as follows:
 
-## System requirements
+## Reproducing results from scratch
+
+### System requirements
 
 We assume that you are running this code on a Linux system with slurm and the spack package manager. BlueRecording has not been tested on any other system. 
 
-## Installation
+### Installation
 Download the model data from our [Zenodo repository](https://zenodo.org/records/11113043) and extract it into the `config` folder.
 
 Install Neurodamus and BlueRecording according to the instructions in the [BlueRecording repository](github.com/BlueBrain/BlueRecording). This repo assumes that your system meets the requirements described there.
-
-## Reproducing results from scratch
 
 ### Basic workflow
 This paper relies on the BlueRecording workflow described in [this paper](https://www.biorxiv.org/content/10.1101/2024.05.14.591849v1) and [this repo]((github.com/BlueBrain/BlueRecording)). Briefly, to simulate LFP and objective CSD, the BlueRecording workflow involves
