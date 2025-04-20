@@ -24,25 +24,33 @@ In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae
 
 ## Reproducing Figures 2-4
 
-**Note that you can skip many of the steps described in this section by downloading the postprocessed LFP data from [our Zeonodo repository](https://zenodo.org/records/14998743). Once that data is downloaded, you can skip directly to Step 4 in "Reproducing Figrue 2" and to Step 7 in "Reproducing Figures 3 and 4".**
+**Note that you can skip many of the steps described in this section by downloading the postprocessed LFP data from [our Zeonodo repository](https://zenodo.org/records/14998743). Once that data is downloaded, you can skip directly to Step 3 in "Reproducing Figure 3" and to Step 7 in "Reproducing Figure 4".**
 
 In order to create electrode files to calculate the LFP signals from neural simulations, the positions of the neural segments in the model must be calculated:
 - In the folder `electrodes`, run `launch.sh` to generate a 1-timestep compartment report (i.e., an h5 file that lists each of the neural segments in the model.
 - In the same folder, run `GetPositions.sh` to interpolate the 3D positions of each of these neural segments
 
-### Reproducing Figure 2
+### Reproducing Figures 2-3
+
 1. Generate electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
    * a. In the folder `electrodes`, run `WriteCSV_HighRes.sh` to generate the csv file that defines the electrode array.
    * b. Run `InitializeArray_HighRes.sh` to initialize the h5 file read by Neurodamus
    * c. Run `PopulateArray_HighRes.sh` to populate the h5 file created in the previous step.
+  
+#### Reproducing Figure 2
 
-2. Then launch the simulations in the folder `highRes` by running the script `launch.sh` in each of the subfolders. LFP and $o_DCSD$ signal contributions from each cell in the simulation will be calculated.
+1. Run the Python script `makeDerivatives.py`. This script generates a weights file that lists the contributions to the CSD from a unit current at each neural segment, by taking the negative second derivative of the coefficients calculated in the previous step.
+2. Run the Jupyter notebook `derivativeHistograms.py` to generate Figure 2.
 
-3. Next, sum the LFP and $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the `highRes` folder.
+#### Reproducing Figure 3
 
-4. Finally, run the notebook `csdCorrelations.ipynb` to generate Figure 2.
+1. Launch the simulations in the folder `highRes` by running the script `launch.sh` in each of the subfolders. LFP and $o_DCSD$ signal contributions from each cell in the simulation will be calculated.
 
-### Reproducing Figures 3 and 4
+2. Next, sum the LFP and $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the `highRes` folder.
+
+3. Finally, run the notebook `csdCorrelations.ipynb` to generate Figure 3.
+
+#### Reproducing Figure 4
 
 1. Generate electrode arrays with 20 $\mu m$ spacing to calculate $o_DCSD$ with various radii $\rho$
 - In the folder `electrodes`, run `WriteCSV_Radii.sh` to generate the csv file that defines the electrode array.
@@ -59,7 +67,7 @@ In order to create electrode files to calculate the LFP signals from neural simu
 
 6. Next, sum the $nnCSD$ signals over cells by running the script `Geteeg.sh` in the folder `secondDeriv`
 
-7. Finally, run the notebook `csdCorrelations_radii.ipynb` to generate Figures 3 and 4.
+7. Finally, run the notebook `csdCorrelations_radii.ipynb` to generate Figure 4.
 
 # Acknowledgment
 The development of this software was supported by funding to the Blue Brain Project, a research center of the École polytechnique fédérale de Lausanne (EPFL), from the Swiss government's ETH Board of the Swiss Federal Institutes of Technology.
