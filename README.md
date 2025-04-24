@@ -24,7 +24,7 @@ In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae
 
 ## Reproducing Figures 2-4
 
-**Note that you can skip many of the steps described in this section by downloading the postprocessed LFP data from [our Zeonodo repository](https://zenodo.org/records/14998743). Once that data is downloaded, you can skip directly to Step 3 in "Reproducing Figure 3" and to Step 7 in "Reproducing Figure 4".**
+**Note that you can skip many of the steps described in this section by downloading the postprocessed LFP data from [our Zeonodo repository](https://zenodo.org/records/14998743). Once that data is downloaded, you can skip directly to Step 2 in "Reproducing Figure 2", Step 3 in "Reproducing Figure 3" and to Step 7 in "Reproducing Figure 4".**
 
 In order to create electrode files to calculate the LFP signals from neural simulations, the positions of the neural segments in the model must be calculated:
 - In the folder `electrodes`, run `launch.sh` to generate a 1-timestep compartment report (i.e., an h5 file that lists each of the neural segments in the model.
@@ -34,12 +34,14 @@ In order to create electrode files to calculate the LFP signals from neural simu
 
 1. Generate electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
    * a. In the folder `electrodes`, run `WriteCSV_HighRes.sh` to generate the csv file that defines the electrode array.
-   * b. Run `InitializeArray_HighRes.sh` to initialize the h5 file read by Neurodamus
+   * b. Run `InitializeArray_HighRes.sh` to initialize the h5 file coeffs_highRes.h5 that is read by Neurodamus
    * c. Run `PopulateArray_HighRes.sh` to populate the h5 file created in the previous step.
+     
+* Note that the version of the coeffs_highRes.h5 file contained in the Zenodo repository only contains the coefficients for the LFP, and not for the $o_DCSD$. 
   
 #### Reproducing Figure 2
 
-1. Run the Python script `makeDerivatives.py`. This script generates a weights file that lists the contributions to the CSD from a unit current at each neural segment, by taking the negative second derivative of the coefficients calculated in the previous step.
+1. Run the Python script `makeDerivatives.py`. This script generates a weights file that lists the contributions to the "standard" CSD from a unit current at each neural segment, by taking the negative second derivative of the coefficients calculated for the LFP in the previous step. The resulting weights file is named `csdCoeffs.h5`.
 2. Run the Jupyter notebook `derivativeHistograms.py` to generate Figure 2.
 
 #### Reproducing Figure 3
@@ -54,14 +56,14 @@ In order to create electrode files to calculate the LFP signals from neural simu
 
 1. Generate electrode arrays with 20 $\mu m$ spacing to calculate $o_DCSD$ with various radii $\rho$
 - In the folder `electrodes`, run `WriteCSV_Radii.sh` to generate the csv file that defines the electrode array.
-- Run `InitializeArray_Radii.sh` to initialize the h5 file read by Neurodamus
+- Run `InitializeArray_Radii.sh` to initialize the h5 file coeffs_radii.h5 read by Neurodamus
 - Run `PopulateArray_Radii.sh` to populate the h5 file created in the previous step.
 
 2. Then launch the simulations in the folder `radii` by running the script `launch.sh` in each of the subfolders.
 
 3. Next, sum the $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the folder `radii`
 
-4. Run the notebook `derivatives.ipynb` to generate the weights file that calculated non-negative CSD (nnCSD). Briefly, this notebook takes the negative second derivative of the LFP weights calculated above, and zeros out the negative values.
+4. Run the notebook `derivatives.ipynb` to generate the weights file that calculated non-negative CSD (nnCSD). Briefly, this notebook takes the negative second derivative of the LFP weights calculated above, and zeros out the negative values. The resulting weights file is named `derivative.h5`.
 
 5. Launch the simulations in the folder `secondDeriv` by running the script `launch.sh` in each of the subfolders; this will calculate the nnCSD.
 
