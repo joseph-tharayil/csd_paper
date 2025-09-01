@@ -54,14 +54,6 @@
         }
       },
       {
-        "edges_file": "$NETWORK_EDGES_DIR/midrange__S1nonbarrel_neurons__chemical/edges.h5",
-        "populations": {
-           "midrange__S1nonbarrel_neurons__chemical": {
-              "type": "chemical"
-           }
-        }
-      },
-      {
         "edges_file": "$NETWORK_EDGES_DIR/POm__S1nonbarrel_neurons__chemical/edges.h5",
         "populations": {
            "POm__S1nonbarrel_neurons__chemical": {
