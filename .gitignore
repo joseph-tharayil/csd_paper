@@ -10,3 +10,5 @@ pkls/
 **/*.png
 **/*.dat
 **/*.log
+config/
+**/*.tar.gz
