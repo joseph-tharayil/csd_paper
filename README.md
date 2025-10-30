@@ -1,5 +1,7 @@
 # CSD in whisker flick
 
+[![DOI](https://zenodo.org/badge/848799041.svg)](https://doi.org/10.5281/zenodo.17484485)
+
 This branch of the repository contains code used to generate Figure 2e in the paper [Computational modeling reveals biological mechanisms underlying the whisker-flick EEG](https://www.biorxiv.org/content/10.1101/2024.12.13.628364v1.full). Steps to reproduce that figure from scratch are as follows (but see the bottom of the ReadME for a quicker way to reproduce the figure):
 
 ## Reproducing results from scratch
