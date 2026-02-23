@@ -20,15 +20,17 @@
             "init_depleted": true,
             "minis_single_vesicle": true
         }
-    }
-  },
+    },
+  
 "modifications": [
          {
              "name": "applyTTX",
              "node_set": "hex0",
              "type": "ttx"
          }
-],
+]
+
+},
 
   "target_simulator": "CORENEURON",
   "network": "../../../../../O1_data/circuit_config.json",
