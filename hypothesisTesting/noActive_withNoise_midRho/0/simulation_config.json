@@ -20,7 +20,15 @@
             "init_depleted": true,
             "minis_single_vesicle": true
         }
-    }
+    },
+  
+"modifications": [
+         {
+             "name": "applyTTX",
+             "node_set": "hex0",
+             "type": "ttx"
+         }
+]
   },
 
   "target_simulator": "CORENEURON",
@@ -165,7 +173,7 @@
         "cells": "Mosaic",
         "variable_name": "v",
         "dt": 1,
-        "start_time": 1500,
+        "start_time": 1500.0,
         "end_time": 1550,
         "sections":"all"
     }

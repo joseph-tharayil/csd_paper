@@ -4,7 +4,7 @@
     "tstop": 1550,
     "random_seed": 843,
     "run_mode":"WholeCell",
-    "electrodes_file": "../../../../makeNewElectrodes/csd_paper/electrodes/coeffs_largeRadii.h5"
+    "electrodes_file": "../../../../makeNewElectrodes/csd_paper/electrodes/coeffs_100.h5"
   },
 
   "conditions": {

@@ -3,8 +3,7 @@
     "dt": 0.025,
     "tstop": 1550,
     "random_seed": 843,
-    "run_mode":"WholeCell",
-    "electrodes_file": "../../../../makeNewElectrodes/csd_paper/electrodes/coeffs_100.h5"
+    "run_mode":"WholeCell"
   },
 
   "conditions": {
@@ -25,7 +24,7 @@
 
   "target_simulator": "CORENEURON",
   "network": "../../../../../O1_data/circuit_config.json",
-  "node_set": "hex0",
+  "node_set": "hex_O1",
   "output": {
     "output_dir": "./reporting",
     "spikes_file": "spikes.h5"
@@ -44,6 +43,13 @@
             "target": "hex_O1",
             "delay": 0.025,
             "weight": 0.0
+        },
+        {
+            "name": "reconnect",
+            "source": "hex_O1",
+            "target": "hex_O1",
+            "delay": 1000,
+            "weight": 1.0
         }
     ],
 
@@ -56,7 +62,7 @@
         "spike_file": "../../../../BBP-SM-whisker-scan/simulation_1/vpm_input.h5",
         "source": "proj_Thalamocortical_VPM_Source",
         "node_set": "hex_O1"
-    },
+    },  
     "Stimulus_gExc_L1": {
         "input_type": "conductance",
         "module": "relative_ornstein_uhlenbeck",
@@ -156,20 +162,6 @@
         "sd_percent": 0.921,
         "node_set": "Layer6Inhibitory"
     }
-  },
-
-  "reports": {
-
-      "lfp_report": {
-        "type": "lfp",
-        "cells": "Mosaic",
-        "variable_name": "v",
-        "dt": 1,
-        "start_time": 1500,
-        "end_time": 1550,
-        "sections":"all"
-    }
- 
   },
 
   "metadata": {
