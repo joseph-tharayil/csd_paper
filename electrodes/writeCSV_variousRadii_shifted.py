@@ -12,7 +12,6 @@ The LFP will be calculated using the line source approximation
 The csv file will also include electrodes to calculate the osCSD and odCSD, for inter-electrode spacing of 20 um
 '''
 
-
 def repositionElectrode(probe, center, main_axis):
     probe.move(center)
 
@@ -43,6 +42,7 @@ def repositionElectrode(probe, center, main_axis):
         probe.rotate(rotation_axis, angle * 180 / np.pi)
 
     return probe
+
 def updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType):
 
     for p in electrodePositions[numElectrodes:]:
@@ -60,12 +60,14 @@ if __name__=='__main__':
 
     probe = MEA.return_mea(probe_name)
 
-    # center, azimuth, elevation = alignmentInfo(path_to_simconfig,'hex0')
-
+    #center, azimuth, elevation = alignmentInfo(path_to_simconfig,'hex0')
     main_axis, center = alignmentInfo(path_to_simconfig, 'hex0')
-    repositionElectrode(probe, center, main_axis)  # azimuth, elevation)
+    repositionElectrode(probe, center, main_axis)#azimuth, elevation)
+
 
     electrodePositions = probe.positions[23:74]
+
+    electrodePositions += main_axis/np.linalg.norm(main_axis)*10 #Shifts by 10 um
 
     newPositions = (electrodePositions[:-1]+electrodePositions[1:])/2
 
@@ -80,21 +82,12 @@ if __name__=='__main__':
     electrodeTypeList = []
     numElectrodes = 0
     
-    electrodeType = 'ObjectiveCSD_Disk_200'
-    electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
-
-        
-    electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
-    electrodeType = 'ObjectiveCSD_Disk_100'
+    electrodeType = 'LineSource'
     electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
 
     electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
-    electrodeType = 'ObjectiveCSD_Disk_50'
+    electrodeType = 'ObjectiveCSD_Disk_20'
     electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
-
-#    electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
-#    electrodeType = 'ObjectiveCSD_Disk_20'
-#    electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
 
     regionList, layerList = getAtlasInfo(path_to_simconfig, electrodePositions)
 

@@ -9,7 +9,7 @@ if __name__=='__main__':
 
     path_to_simconfig = 'simulation_config.json' # simulation_config.json with one-timestep compartment report
     segment_position_folder = 'positions/' # Folder with segment positions; output of getPositions.py
-    outputfile = 'coeffs_100.h5' 
+    outputfile = 'coeffs_missing.h5' 
     
     neurons_per_file = 1000
 
