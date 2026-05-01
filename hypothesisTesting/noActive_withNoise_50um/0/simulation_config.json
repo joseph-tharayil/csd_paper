@@ -26,7 +26,7 @@
          {
              "name": "applyTTX",
              "node_set": "hex0",
-             "type": "TTX"
+             "type": "ttx"
          }
 ]
   },
