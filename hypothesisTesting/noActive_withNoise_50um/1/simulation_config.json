@@ -2,9 +2,9 @@
    "run": {
     "dt": 0.025,
     "tstop": 1550,
-    "random_seed": 84,
+    "random_seed": 8430,
     "run_mode":"WholeCell",
-    "electrodes_file": "../../coeffs_highRes_lfpCSD.h5"
+    "electrodes_file": "../../../../makeNewElectrodes/csd_paper/electrodes/coeffs_all.h5"
   },
 
   "conditions": {
@@ -20,7 +20,15 @@
             "init_depleted": true,
             "minis_single_vesicle": true
         }
-    }
+    },
+  
+"modifications": [
+         {
+             "name": "applyTTX",
+             "node_set": "hex0",
+             "type": "ttx"
+         }
+]
   },
 
   "target_simulator": "CORENEURON",
@@ -162,13 +170,12 @@
 
       "lfp_report": {
         "type": "lfp",
-        "cells": "hex0",
+        "cells": "Mosaic",
         "variable_name": "v",
         "dt": 1,
-        "start_time": 0.0,
-        "end_time": 3000,
-        "sections":"all",
-	"enabled":true
+        "start_time": 1500.0,
+        "end_time": 1550,
+        "sections":"all"
     }
  
   },

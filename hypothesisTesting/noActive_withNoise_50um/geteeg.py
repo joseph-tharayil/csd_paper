@@ -9,7 +9,7 @@ import os
 rank = MPI.COMM_WORLD.Get_rank()
 
 numfolders = 1
-folder = str(0)
+folder = str(3)
 
 ranksPerFolder = 1
 
@@ -24,7 +24,7 @@ types = np.sort(list(s.circuit.nodes.property_values('mtype')))
 
 
 
-eeg = r.get(group=types[rank])
+eeg = r.get(group=types[rank],t_start=1500,t_stop=1550)
 eeg.columns = pd.MultiIndex.from_product((np.unique(eeg.columns.get_level_values(0)),np.unique(eeg.columns.get_level_values(1))),names=['gid','electrode']) #Adds names for the column indice
 eeg = eeg.T.groupby(level='electrode').sum().T 
 eeg.to_pickle(folder+'/pkls/eeg'+types[rank]+'.pkl')

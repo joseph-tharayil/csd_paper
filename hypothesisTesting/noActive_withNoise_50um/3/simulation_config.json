@@ -1,10 +1,10 @@
 {
    "run": {
     "dt": 0.025,
-    "tstop": 2000,
-    "random_seed": 84,
+    "tstop": 1550,
+    "random_seed": 4,
     "run_mode":"WholeCell",
-    "electrodes_file": "../../coeffs_highRes_lfpCSD.h5"
+    "electrodes_file": "../../../../makeNewElectrodes/csd_paper/electrodes/coeffs_all.h5"
   },
 
   "conditions": {
@@ -20,11 +20,19 @@
             "init_depleted": true,
             "minis_single_vesicle": true
         }
-    }
+    },
+  
+"modifications": [
+         {
+             "name": "applyTTX",
+             "node_set": "hex0",
+             "type": "ttx"
+         }
+]
   },
 
   "target_simulator": "CORENEURON",
-  "network": "../../config/circuit_config.json",
+  "network": "../../../../../O1_data/circuit_config.json",
   "node_set": "hex0",
   "output": {
     "output_dir": "./reporting",
@@ -53,7 +61,7 @@
         "input_type": "spikes",
         "delay": 0,
         "duration": 3000,
-        "spike_file": "vpm_input.h5",
+        "spike_file": "../../../../BBP-SM-whisker-scan/simulation_1/vpm_input.h5",
         "source": "proj_Thalamocortical_VPM_Source",
         "node_set": "hex_O1"
     },
