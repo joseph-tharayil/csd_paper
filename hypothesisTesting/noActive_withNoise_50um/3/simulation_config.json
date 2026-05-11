@@ -173,8 +173,8 @@
         "cells": "Mosaic",
         "variable_name": "v",
         "dt": 1,
-        "start_time": 0.0,
-        "end_time": 3000,
+        "start_time": 1500.0,
+        "end_time": 1550,
         "sections":"all"
     }
  
