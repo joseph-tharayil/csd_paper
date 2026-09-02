@@ -16,4 +16,4 @@ if __name__=='__main__':
     else:
         replace_axons = True
 
-    getPositions(path_to_simconfig, neurons_per_file, files_per_folder, path_to_positions_folder,replace_axons)
+    getPositions(path_to_simconfig, neurons_per_file, files_per_folder, path_to_positions_folder,'hex0',replace_axons)

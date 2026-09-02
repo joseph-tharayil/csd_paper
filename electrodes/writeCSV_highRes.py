@@ -60,11 +60,6 @@ if __name__=='__main__':
     electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
 
     electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
-    electrodeType = 'ObjectiveCSD_Sphere'
-    electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
-
-        
-    electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
     electrodeType = 'ObjectiveCSD_Disk'
     electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
 
