@@ -12,7 +12,7 @@ Download the model data from our [Zenodo repository](https://zenodo.org/records/
 Install Neurodamus and BlueRecording according to the instructions in the [BlueRecording repository](github.com/BlueBrain/BlueRecording). This repo assumes that your system meets the requirements described there.
 
 ## Basic workflow
-This paper relies on the BlueRecording workflow described in [this paper](https://www.biorxiv.org/content/10.1101/2024.05.14.591849v1) and [this repo]((github.com/BlueBrain/BlueRecording)). Briefly, to simulate LFP and objective CSD, the BlueRecording workflow involves
+This paper relies on the BlueRecording workflow described in [this paper](https://doi.org/10.1371/journal.pcbi.1013023) and [this repo](github.com/BlueBrain/BlueRecording). Briefly, to simulate LFP and objective CSD, the BlueRecording workflow involves
 - Simulating one timestep from the circuit model in question, in order to generate a compartment report
 - Interpolating segment positions from the circuit model
 - Creating a "weights file" which describes the contribution of the transmembrane current from each segment to the desired signal (either LFP or obejctive CSD, at each electrode)
@@ -20,7 +20,7 @@ This paper relies on the BlueRecording workflow described in [this paper](https:
 
 ## Reproducing Figure 1
 
-In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae implemented in this notebook (Eq. 5 and 6 in the paper) are derived using the Mathematica notebook csds.nb and limitCase.nb, respectively.
+In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae implemented in this notebook (Eq. 9 and 11 in the paper) are derived using the Mathematica notebook csds.nb and limitCase.nb, respectively.
 
 ## Reproducing Figures 2-4
 
