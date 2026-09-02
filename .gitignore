@@ -12,3 +12,4 @@ pkls/
 **/*.log
 config/
 **/*.tar.gz
+!hypothesisTesting/*/*.npy

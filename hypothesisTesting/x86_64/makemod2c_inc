@@ -1,0 +1,256 @@
+ALU.cpp: ../mods_dir//ALU.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "ALU.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./ALU.o: ALU.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+CaDynamics_DC0.cpp: ../mods_dir//CaDynamics_DC0.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "CaDynamics_DC0.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./CaDynamics_DC0.o: CaDynamics_DC0.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+Ca_HVA2.cpp: ../mods_dir//Ca_HVA2.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Ca_HVA2.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./Ca_HVA2.o: Ca_HVA2.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+Ca_LVAst.cpp: ../mods_dir//Ca_LVAst.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Ca_LVAst.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./Ca_LVAst.o: Ca_LVAst.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+ConductanceSource.cpp: ../mods_dir//ConductanceSource.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "ConductanceSource.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./ConductanceSource.o: ConductanceSource.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+CoreNEURONArtificialCell.cpp: ../mods_dir//CoreNEURONArtificialCell.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "CoreNEURONArtificialCell.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./CoreNEURONArtificialCell.o: CoreNEURONArtificialCell.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+DetAMPANMDA.cpp: ../mods_dir//DetAMPANMDA.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "DetAMPANMDA.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./DetAMPANMDA.o: DetAMPANMDA.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+DetGABAAB.cpp: ../mods_dir//DetGABAAB.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "DetGABAAB.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./DetGABAAB.o: DetGABAAB.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+GluSynapse.cpp: ../mods_dir//GluSynapse.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "GluSynapse.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./GluSynapse.o: GluSynapse.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+Ih.cpp: ../mods_dir//Ih.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Ih.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./Ih.o: Ih.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+K_Pst.cpp: ../mods_dir//K_Pst.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "K_Pst.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./K_Pst.o: K_Pst.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+K_Tst.cpp: ../mods_dir//K_Tst.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "K_Tst.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./K_Tst.o: K_Tst.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+KdShu2007.cpp: ../mods_dir//KdShu2007.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "KdShu2007.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./KdShu2007.o: KdShu2007.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+Kv7.cpp: ../mods_dir//Kv7.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Kv7.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./Kv7.o: Kv7.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+MembraneCurrentSource.cpp: ../mods_dir//MembraneCurrentSource.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "MembraneCurrentSource.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./MembraneCurrentSource.o: MembraneCurrentSource.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+NaTg.cpp: ../mods_dir//NaTg.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "NaTg.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./NaTg.o: NaTg.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+NaTg_axon.cpp: ../mods_dir//NaTg_axon.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "NaTg_axon.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./NaTg_axon.o: NaTg_axon.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+NaTg_persistent_axon.cpp: ../mods_dir//NaTg_persistent_axon.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "NaTg_persistent_axon.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./NaTg_persistent_axon.o: NaTg_persistent_axon.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+NaTg_persistent_somadend.cpp: ../mods_dir//NaTg_persistent_somadend.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "NaTg_persistent_somadend.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./NaTg_persistent_somadend.o: NaTg_persistent_somadend.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+NaTg_somadend.cpp: ../mods_dir//NaTg_somadend.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "NaTg_somadend.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./NaTg_somadend.o: NaTg_somadend.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+Nap_Et2.cpp: ../mods_dir//Nap_Et2.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Nap_Et2.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./Nap_Et2.o: Nap_Et2.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+ProbAMPANMDA_EMS.cpp: ../mods_dir//ProbAMPANMDA_EMS.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "ProbAMPANMDA_EMS.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./ProbAMPANMDA_EMS.o: ProbAMPANMDA_EMS.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+ProbGABAAB_EMS.cpp: ../mods_dir//ProbGABAAB_EMS.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "ProbGABAAB_EMS.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./ProbGABAAB_EMS.o: ProbGABAAB_EMS.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+SK_E2.cpp: ../mods_dir//SK_E2.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "SK_E2.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./SK_E2.o: SK_E2.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+SKv3_1.cpp: ../mods_dir//SKv3_1.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "SKv3_1.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./SKv3_1.o: SKv3_1.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+SonataReportHelper.cpp: ../mods_dir//SonataReportHelper.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "SonataReportHelper.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./SonataReportHelper.o: SonataReportHelper.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+SonataReports.cpp: ../mods_dir//SonataReports.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "SonataReports.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./SonataReports.o: SonataReports.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+StochKv3.cpp: ../mods_dir//StochKv3.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "StochKv3.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./StochKv3.o: StochKv3.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+TTXDynamicsSwitch.cpp: ../mods_dir//TTXDynamicsSwitch.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "TTXDynamicsSwitch.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./TTXDynamicsSwitch.o: TTXDynamicsSwitch.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+gap.cpp: ../mods_dir//gap.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "gap.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./gap.o: gap.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+netstim_inhpoisson.cpp: ../mods_dir//netstim_inhpoisson.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "netstim_inhpoisson.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./netstim_inhpoisson.o: netstim_inhpoisson.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
+vecevent.cpp: ../mods_dir//vecevent.mod $(NOCMODL)
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../mods_dir";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "vecevent.mod" -o "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64" )
+
+./vecevent.o: vecevent.cpp
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) /mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<\\n"
+	$(CXXCOMPILE) -I"../mods_dir" $(INCLUDES) -fPIC -c "/mnt/mydata/Documents/csdRevisions/csd_paper/hypothesisTesting/x86_64/$<" -o $@
+
