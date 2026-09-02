@@ -1,7 +1,7 @@
 **/*.h5
 **/*.pkl
 **/*.npy
-**/.pyc
+**/*.pyc
 **/*.ipynb_checkpoints
 _projections_cache_/
 **/*.err
@@ -13,3 +13,4 @@ pkls/
 config/
 **/*.tar.gz
 !hypothesisTesting/*/*.npy
+__pycache__/
