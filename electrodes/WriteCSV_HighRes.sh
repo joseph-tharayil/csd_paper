@@ -9,7 +9,7 @@
 #SBATCH --output=EEG_2_CoordsV.out
 #SBATCH --error=EEG_2_CoordsV.err
 
-module load unstable py-mpi4py
-source ~/bluerecording-dev/bin/activate
+spack env activate -p bluerecording-dev
+source ~/Documents/bluebrainStuff/bbpEnv/bin/activate
 
 srun -n 1 python writeCSV_highRes.py 'Neuropixels-384' 'simulation_config.json' 'electrode_csv_highRes.csv'

@@ -12,25 +12,24 @@ sos = signal.butter(3, [1,500], 'bp', fs=10000, output='sos')
 
 EEGs = {}
 
-for i in range(1):
+
+for i in range(10):
 
     for file in os.listdir(str(i)+'/pkls'):
         t = file.split('.')[0].split('g')[1]
         if i == 0:
-            EEGs[t] = pd.read_pickle(str(i)+'/pkls/'+file)
+            EEGs[t] = pd.read_pickle(str(i)+'/pkls/'+file)/10
         else:
             
-            try:
-                EEGs[t] += pd.read_pickle(str(i)+'/pkls/'+file)
-            except:
-                pass
+            EEGs[t] += pd.read_pickle(str(i)+'/pkls/'+file)/10
 
 total = 0
 for j, item in enumerate(EEGs.keys()):
 
     total += EEGs[item]
+    EEGs[item]
     
     
-np.save('total_1.npy',total)
-np.save('EEGs_1.npy',EEGs)
+np.save('total.npy',total)
+np.save('EEGs.npy',EEGs)
 

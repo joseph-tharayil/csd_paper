@@ -15,4 +15,6 @@ if __name__=='__main__':
 
     outputfile = sys.argv[3]
 
-    initializeH5File(path_to_simconfig,outputfile,electrode_csv)
+    target = sys.argv[4]
+
+    initializeH5File(path_to_simconfig,outputfile,electrode_csv,target)
