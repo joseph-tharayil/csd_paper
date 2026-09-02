@@ -22,7 +22,7 @@ This paper relies on the BlueRecording workflow described in [this paper](https:
 
 In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae implemented in this notebook (Eq. 9 and 11 in the paper) are derived using the Mathematica notebook csds.nb and limitCase.nb, respectively.
 
-## Reproducing Figures 2-4
+## Reproducing Figures 2-6
 
 **Note that you can skip many of the steps described in this section by downloading the postprocessed LFP data from [our Zeonodo repository](https://zenodo.org/records/14998743). Once that data is downloaded, you can skip directly to Step 2 in "Reproducing Figure 2", Step 3 in "Reproducing Figure 3" and to Step 7 in "Reproducing Figure 4".**
 
@@ -30,7 +30,7 @@ In order to create electrode files to calculate the LFP signals from neural simu
 - In the folder `electrodes`, run `launch.sh` to generate a 1-timestep compartment report (i.e., an h5 file that lists each of the neural segments in the model.
 - In the same folder, run `GetPositions.sh` to interpolate the 3D positions of each of these neural segments
 
-### Reproducing Figures 2-3
+### Reproducing Figures 2-6
 
 1. Generate electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
    * a. In the folder `electrodes`, run `WriteCSV_HighRes.sh` to generate the csv file that defines the electrode array.
@@ -46,11 +46,11 @@ In order to create electrode files to calculate the LFP signals from neural simu
 
 #### Reproducing Figure 3
 
-1. Launch the simulations in the folder `highRes` by running the script `launch.sh` in each of the subfolders. LFP and $o_DCSD$ signal contributions from each cell in the simulation will be calculated.
+1. Launch the simulations in the folder `hypothesisTesting/nonshiftedPositions_rerun` by running the script `launch.sh` in each of the subfolders. LFP and $o_DCSD$ signal contributions from each cell in the simulation will be calculated.
 
-2. Next, sum the LFP and $o_DCSD$ signals over cells by running the script `Geteeg.sh` in the `highRes` folder.
+2. Next, sum the LFP and $o_DCSD$ signals over cells by running the scripts `geteeg.py`, followed by `eegTotal.py` in this folder.
 
-3. Finally, run the notebook `csdCorrelations.ipynb` to generate Figure 3.
+3. Finally, run the notebook `hypothesisTesting/rerun.ipynb` to generate the panels of Figure 3.
 
 #### Reproducing Figure 4
 
