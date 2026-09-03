@@ -4,12 +4,14 @@ This repository contains the code used in the paper "Information content and int
 
 ## System requirements
 
-We assume that you are running this code on a Linux system with slurm and the spack package manager. BlueRecording has not been tested on any other system. 
+The generation of BlueRecording weight files and postprocessing of data can be run on a Linux system or on WSL. 
+
+Simulations of neural activity can be run either on a linux system with slurm and the spack package manager, or in a Docker container. See the [Neurodamus](https://github.com/openbraininstitute/neurodamus) repo for more details.
 
 ## Installation
-Download the model data from our [Zenodo repository](https://zenodo.org/records/11113043) and extract it into the `config` folder.
+Download the model data from its [Zenodo repository](https://zenodo.org/records/11113043) and extract it into the `config` folder.
 
-Install Neurodamus and BlueRecording according to the instructions in the [BlueRecording repository](github.com/BlueBrain/BlueRecording). This repo assumes that your system meets the requirements described there.
+Install Neurodamus and BlueRecording according to the instructions in the [BlueRecording repository](github.com/BlueBrain/BlueRecording). 
 
 ## Basic workflow
 This paper relies on the BlueRecording workflow described in [this paper](https://doi.org/10.1371/journal.pcbi.1013023) and [this repo](github.com/BlueBrain/BlueRecording). Briefly, to simulate LFP and objective CSD, the BlueRecording workflow involves
