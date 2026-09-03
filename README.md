@@ -85,7 +85,8 @@ See [here](https://github.com/steevelaquitaine/spikebias/tree/master/assets/vali
 #### Reproducing Figure S3
 1. Run the simulations in the folder `highRes`
 2. Next, sum the LFP and $o_DCSD$ signals over cells by running the scripts `geteeg.py`, followed by `eegTotal.py` in this folder.
-3. Run the notebook `csdCorrelations_radii_resting.ipynb`
+3. Run the notebook `csdCorrelations_radii.ipynb` to generate panel b
+4. Run the notebook `csdCorrelations_radii_resting.ipynb` to generate panels a, c and d
 
 # Citation
 If you use this software, we kindly ask you to cite the following paper: [Tharayil et al. **(2025)** iCSD can produce spurious results in dense electrode arrays. *bioRxiv*](https://doi.org/10.1101/2025.05.02.651822)
