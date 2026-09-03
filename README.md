@@ -67,17 +67,10 @@ Run the Python script `makeDerivatives.py`. This script generates a weights file
 #### Reproducing Figure 6
 
 1. First, run the simulations in each of the following folders (assuming that you have already run the simulations in `hypothesisTesting/nonshiftedPositions_rerun`):
-   * hypothesisTesting/noActive
-   * hypothesisTesting/noActive_midRho
    * hypothesisTesting/noActive_50um
-   * hypothesisTesting/noNoise
-   * hypothesisTesting/noRecurrentConnecvitity_smallRho
+   * hypothesisTesting/noNoise_50um
    * hypothesisTesting/noRecurrentConnecvitity_50um
-   * hypothesisTesting/noRecurrentConnecvitity_midRho
-   * hypothesisTesting/noRecurrentConnecvitity_smallRho
    * hypothesisTesting/noActive_withNoise_50um
-   * hypothesisTesting/noActive_withNoise_midRho
-   * hypothesisTesting/noActive_withNoise_smallRho
 2. In each of the folders listed above, sum the LFP and $o_DCSD$ signals over cells by running the scripts `geteeg.py`, followed by `eegTotal.py`
 3. Generate the figures by running the notebook `hypothesisTesting/hypotheses.ipynb`
 
