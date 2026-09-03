@@ -1,6 +1,6 @@
-# iCSD produces spurious results in dense electrode arrays
+# Information content and interpretation of CSD non-trivially depends on array density
 
-This repository contains the code used in the paper "iCSD generates spurious signals for dense electrode arrays". Steps to reproduce the figures in that paper are as follows:
+This repository contains the code used in the paper "Information content and interpretation of CSD non-trivially depends on array density". Steps to reproduce the figures in that paper are as follows:
 
 ## System requirements
 
