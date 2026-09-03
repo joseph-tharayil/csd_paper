@@ -34,14 +34,15 @@ In order to create electrode files to calculate the LFP signals from neural simu
 - In the folder `electrodes`, run `launch.sh` to generate a 1-timestep compartment report (i.e., an h5 file that lists each of the neural segments in the model.
 - In the same folder, run `GetPositions.sh` to interpolate the 3D positions of each of these neural segments
 
-Then, generate electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$
-   * a. In the folder `electrodes`, run `WriteCSV_HighRes.sh` to generate the csv file that defines the electrode array.
-   * b. Run `InitializeArray_HighRes.sh` to initialize the h5 file coeffs_highRes.h5 that is read by Neurodamus
-   * c. Run `PopulateArray_HighRes.sh` to populate the h5 file created in the previous step.
-     
-* Note that the version of the coeffs_highRes.h5 file contained in the Zenodo repository only contains the coefficients for the LFP, and not for the $o_DCSD$.
+Then, generate weights files for electrode arrays with 20 $\mu m$ spacing, to calculate LFP and $o_DCSD$. This repo contains the code to generate several different weights files. One of these weights files, `coeffs_highRes.h5`, is used in the simulations contained in the folder `highRes/` and is used as an input to generate the weights file `derivative.h5` used in the simulations in the folder `secondDeriv/`. These arrays are used to generate the data in Figure 2 and in Supplementary Figure S1. In contrast, the simulations in the folder `hypothesisTesting/`, which are used to generate the data in most other figures, use the weights file `coeffs_all.h5`, or the weights file `derivatives_all.h5`, which is generated therefrom. This latter set of weights files is better aligned with the cortical column (differing from the first set by 13 degrees), and, for computational efficiency, only uses the central column of the circuit.
 
-Run the Python script `makeDerivatives.py`. This script generates a weights file that lists the contributions to the "standard" CSD from a unit current at each neural segment, by taking the negative second derivative of the coefficients calculated for the LFP in the previous step. The resulting weights file is named `csdCoeffs.h5`.
+To generate the weights files:
+   * a. In the folder `electrodes`, run `writeCSV_all.py` or `writeCSV_highRes.py` to generate the csv file that defines the electrode array.
+   * b. Run `run_initialize_all.py` or `run_initialize_highRes.py` to initialize the h5 files
+   * c. Run `run_write_weights_all.py` or `run_write_weights_highRes.py` to populate the h5 file created in the previous step.
+     
+
+Finally, run the notebook `derivatives.ipynb`. This script generates a weights file that lists the contributions to the "standard" CSD from a unit current at each neural segment, by taking the negative second derivative of the coefficients calculated for the LFP in the previous step. The resulting weights files are named `derivative.h5` and `derivative_all.h5`.
   
 #### Reproducing Figure 2
 
