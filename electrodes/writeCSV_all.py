@@ -54,9 +54,9 @@ def updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electro
 
 if __name__=='__main__':
 
-    probe_name = sys.argv[1]
-    path_to_simconfig = sys.argv[2]
-    electrode_csv = sys.argv[3]
+    probe_name = 'Neuropixels_384'
+    path_to_simconfig = 'simulation_config.json'
+    electrode_csv = 'electrode_csv_all.csv'
 
     probe = MEA.return_mea(probe_name)
 
@@ -76,10 +76,10 @@ if __name__=='__main__':
         insertionIdx += 2
 
     electrodePositionsOriginal = electrodePositions
-    
+
     electrodeTypeList = []
     numElectrodes = 0
-    
+
     electrodeType = 'LineSource'
     electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
 
@@ -95,14 +95,22 @@ if __name__=='__main__':
     electrodeType = 'ObjectiveCSD_Disk_50'
     electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
 
+    electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
+    electrodeType = 'ObjectiveCSD_Disk_100'
+    electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
+
+    electrodePositions = np.vstack((electrodePositions,electrodePositionsOriginal))
+    electrodeType = 'ObjectiveCSD_Disk_20'
+    electrodeTypeList, numElectrodes = updateTypeList(electrodeTypeList, numElectrodes, electrodePositions, electrodeType)
+
     regionList, layerList = getAtlasInfo(path_to_simconfig, electrodePositions)
 
     electrodeData = pd.DataFrame(data=electrodePositions,columns=['x','y','z'])
-    
+
     layerData = pd.DataFrame(data=layerList,columns=['layer'])
 
     regionData = pd.DataFrame(data=regionList,columns=['region'])
-    
+
     electrodeTypeData = pd.DataFrame(data=electrodeTypeList,columns=['type'])
 
     data = pd.concat((electrodeData,layerData),axis=1)

@@ -9,12 +9,12 @@ if __name__=='__main__':
     type is either LineSource or Reciprocity
     '''
 
-    electrode_csv = sys.argv[1]
+    electrode_csv = 'electrode_csv_highRes.csv'
 
-    path_to_simconfig = sys.argv[2]
+    path_to_simconfig = 'simulation_config.json'
 
-    outputfile = sys.argv[3]
+    outputfile = 'coeffs_highRes.h5'
 
-    target = sys.argv[4]
+    target = 'hex_O1'
 
     initializeH5File(path_to_simconfig,outputfile,electrode_csv,target)
