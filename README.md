@@ -39,7 +39,7 @@ Then, generate weights files for electrode arrays with 20 $\mu m$ spacing, to ca
 To generate the weights files:
    * a. In the folder `electrodes`, run `writeCSV_all.py`, `writeCSV_radii.py` or `writeCSV_highRes.py` to generate the csv file that defines the electrode array.
    * b. Run `run_initialize_all.py`, `run_initialize_radii.py` or `run_initialize_highRes.py` to initialize the h5 files
-   * c. Run `run_write_weights_all.py`, `run_write_weights_radii.py` or `run_write_weights_highRes.py` to populate the h5 file created in the previous step.
+   * c. Run `run_write_weights_all.py`, `run_write_weights_radii.py` or `run_write_weights_highRes.py` to populate the h5 file created in the previous step. In order to obtain an output in a reasonable amount of time, you should run these scripts using MPI with as many threads as possible.
      
 Finally, run the notebook `derivatives.ipynb`. This script generates a weights file that lists the contributions to the "standard" CSD from a unit current at each neural segment, by taking the negative second derivative of the coefficients calculated for the LFP in the previous step. The resulting weights files are named `derivative.h5` and `derivative_all.h5`.
   
