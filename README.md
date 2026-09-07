@@ -30,6 +30,8 @@ In order to reproduce Figure 1c-e, run the notebook Analytic.ipynb. The formulae
 
 **Note that you can skip many of the steps described in this section by downloading the postprocessed LFP data from [our Zeonodo repository](https://zenodo.org/records/14998743). Once that data is downloaded, you can skip directly to Step 2 in "Reproducing Figure 3", "Reproducing Figure 5" and "Reproducing Figure 6".**
 
+#### Generating weights files
+
 In order to create electrode files to calculate the LFP signals from neural simulations, the positions of the neural segments in the model must be calculated:
 - In the folder `electrodes`, run `launch.sh` to generate a 1-timestep compartment report (i.e., an h5 file that lists each of the neural segments in the model.
 - In the same folder, run `GetPositions.sh` to interpolate the 3D positions of each of these neural segments
