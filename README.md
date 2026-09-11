@@ -93,7 +93,7 @@ See [here](https://github.com/steevelaquitaine/spikebias/tree/master/assets/vali
 4. Run the notebook `csdCorrelations_radii_resting.ipynb` to generate panels a, c and d
 
 # Citation
-If you use this software, we kindly ask you to cite the following paper: [Tharayil et al. **(2025)** iCSD can produce spurious results in dense electrode arrays. *bioRxiv*](https://doi.org/10.1101/2025.05.02.651822)
+If you use this software, we kindly ask you to cite the following paper: [Tharayil et al. **(2026)** Information content and interpretation of CSD non-trivially depends on array density. *Journal of Neural Engineering*](https://doi.org/10.1088/1741-2552/ae93f9)
 
 # Acknowledgment
 The development of this software was supported by funding to the Blue Brain Project, a research center of the École polytechnique fédérale de Lausanne (EPFL), from the Swiss government's ETH Board of the Swiss Federal Institutes of Technology.
